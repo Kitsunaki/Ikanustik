@@ -7,7 +7,7 @@ namespace Ikanustik.Weapons {
     private static Random RND = new Random();
 
     public string Name { get; set; }
-    public string Class { get; set; }
+    public WeaponClass Class { get; protected set; }
     public int Cost { get; set; }
     public int Durability { get; set; }
     public int FullDurability { get; set; }
@@ -34,7 +34,7 @@ namespace Ikanustik.Weapons {
         }
 
         int EnemyDUR = 0;
-        if (player.Active_Weapon.Class != "Projektilwaffe") {
+        if (player.ActiveWeapon.Class != WeaponClass.Projektil) {
           FullDamage = FullDamage * (100 - entity.Armor) / 100;
           EnemyDUR = entity.Armor;
         }
@@ -48,11 +48,11 @@ namespace Ikanustik.Weapons {
         int Lose_Durability = RND.Next(0, 2);
         Durability -= Lose_Durability;
         if (Durability <= 0) {
-          player.Active_Weapon = new Faust();
+          player.ActiveWeapon = new Faust();
           Weapon_Lost = "Die Waffe ist zerstört. Du kämpfst mit der Faust weiter!";
         }
 
-        return $"\n\n\n\n\n\n\n\n\t{Krit_Case}\n\t{entity.Name} reduziert seinen Schaden um {EnemyDUR}% und erleidet noch {FullDamage} Schaden.\n\tDie Waffe \"{player.Active_Weapon.Name}\" verlor {Lose_Durability} Haltbarkeit.\n\tDie Genugtuung stieg um {Satisfaction_Rise}% an.\n\t{Weapon_Lost}";
+        return $"\n\n\n\n\n\n\n\n\t{Krit_Case}\n\t{entity.Name} reduziert seinen Schaden um {EnemyDUR}% und erleidet noch {FullDamage} Schaden.\n\tDie Waffe \"{player.ActiveWeapon.Name}\" verlor {Lose_Durability} Haltbarkeit.\n\tDie Genugtuung stieg um {Satisfaction_Rise}% an.\n\t{Weapon_Lost}";
       } else {
         return $"\t\t\t\tGegner vernichtet!";
       }

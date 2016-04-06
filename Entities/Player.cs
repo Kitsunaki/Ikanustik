@@ -4,6 +4,17 @@ using Ikanustik.Weapons;
 namespace Ikanustik.Entities {
 
   internal class Player : Entity {
+    public double Score { get; set; }
+    public double Maxscore { get; set; }
+    public double Satisfaction { get; set; }
+    public int Stamina { get; set; }
+    public double Gold { get; set; }
+    public Weapon ActiveWeapon;
+    public int Strengh { get; set; }
+    public int Resilienz { get; set; }
+    public double Mana { get; set; }
+    public double ManaPool { get; set; }
+    public int Skill { get; set; }
 
     public Player() {
       //Grundwerte
@@ -24,22 +35,10 @@ namespace Ikanustik.Entities {
       Stamina = 5;
 
       //Angriff
-      Active_Weapon = new Faust();
+      ActiveWeapon = new Faust();
       Mana = 5;
       ManaPool = 5;
     }
-
-    public double Score { get; set; }
-    public double Maxscore { get; set; }
-    public double Satisfaction { get; set; }
-    public int Stamina { get; set; }
-    public double Gold { get; set; }
-    public Weapon Active_Weapon;
-    public int Strengh { get; set; }
-    public int Resilienz { get; set; }
-    public double Mana { get; set; }
-    public double ManaPool { get; set; }
-    public int Skill { get; set; }
 
     public string GetHealthMessage() {
       return $"Deine Gesundheit beträgt {Health}/{HealthPool} HP";

@@ -249,8 +249,8 @@ namespace Ikanustik {
       Console.WriteLine($"{player.Name}:\n\n\t{player.Health}/{player.HealthPool} Lebenspunkte\t{player.Mana}/{player.ManaPool} Mana\n");
       Console.WriteLine($"\t{player.Stamina} Ausdauer\t\t{player.Satisfaction}% Genugtuung\n");
       Console.WriteLine($"\t{player.Strengh} Stärke\t\t{player.Resilienz} Resilienz\t\n");
-      Console.WriteLine($"{player.Active_Weapon.Name} ({player.Active_Weapon.Class}):\n");
-      Console.WriteLine($"\t{player.Active_Weapon.MinDamage}-{player.Active_Weapon.MaxDamage} Schaden\t\t{player.Active_Weapon.Durability} Haltbarkeit");
+      Console.WriteLine($"{player.ActiveWeapon.Name} ({player.ActiveWeapon.Class}):\n");
+      Console.WriteLine($"\t{player.ActiveWeapon.MinDamage}-{player.ActiveWeapon.MaxDamage} Schaden\t\t{player.ActiveWeapon.Durability} Haltbarkeit");
 
       Console.WriteLine("\n\n\n\tStarte den Angriff mit (a)!\tNutze Magie mit (m)!");
       char fight = Console.ReadKey(true).KeyChar;
@@ -260,12 +260,12 @@ namespace Ikanustik {
         Random hitr = new Random();
         hit = hitr.Next(2, player.Stamina + 1);
         for (int i = 0; i < (hit - 1); i++) {
-          Console.WriteLine(player.Active_Weapon.Attack(entity, player));
+          Console.WriteLine(player.ActiveWeapon.Attack(entity, player));
           Console.WriteLine("\n(Press ENTER)");
           Console.ReadLine();
         }
         if (entity.Health >= 1) {
-          Console.WriteLine(player.Active_Weapon.EnemyAttack(player, entity));
+          Console.WriteLine(player.ActiveWeapon.EnemyAttack(player, entity));
           Console.WriteLine("\n(Press ENTER)");
           Console.ReadLine();
         }
@@ -343,7 +343,7 @@ namespace Ikanustik {
       do {
         Console.Clear();
         Menus.Bar();
-        Console.WriteLine($"Spieler: {player.Name}\n\n\tGold: {player.Gold}\tErfahrung: {player.Skill}\tAusgerüstet: {player.Active_Weapon.Name} ({player.Active_Weapon.Durability}/{player.Active_Weapon.FullDurability})\n");
+        Console.WriteLine($"Spieler: {player.Name}\n\n\tGold: {player.Gold}\tErfahrung: {player.Skill}\tAusgerüstet: {player.ActiveWeapon.Name} ({player.ActiveWeapon.Durability}/{player.ActiveWeapon.FullDurability})\n");
         if (HelgaMet == false) {
           Console.WriteLine($"\n\t1) Mit Reinhart sprechen");
           Console.WriteLine($"\t2) Gehe weiter!");

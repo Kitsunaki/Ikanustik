@@ -33,8 +33,8 @@ namespace Ikanustik.Entities {
       ReinhartPortrait();
       Console.Write($"\tReinhart:\n\"");
 
-      int RepairCost = player.Active_Weapon.MinDamage * (player.Active_Weapon.FullDurability - player.Active_Weapon.Durability);
-      if (player.Active_Weapon.Class == "Stangenwaffe") {
+      int RepairCost = player.ActiveWeapon.MinDamage * (player.ActiveWeapon.FullDurability - player.ActiveWeapon.Durability);
+      if (player.ActiveWeapon.Class == WeaponClass.Stangen) {
         RepairCost = RepairCost / 2;
       }
 
@@ -50,8 +50,8 @@ namespace Ikanustik.Entities {
         } else if (player.Gold >= RepairCost) {
           Console.Beep();
           player.Gold -= RepairCost;
-          player.Active_Weapon.Durability = player.Active_Weapon.FullDurability;
-          Console.WriteLine($"\"Ja!\"\n\nReinhart: \"Gut! Dein {player.Active_Weapon.Name} is' wieder wie frisch vom Laster jefallen!\"\n(Press ENTER)");
+          player.ActiveWeapon.Durability = player.ActiveWeapon.FullDurability;
+          Console.WriteLine($"\"Ja!\"\n\nReinhart: \"Gut! Dein {player.ActiveWeapon.Name} is' wieder wie frisch vom Laster jefallen!\"\n(Press ENTER)");
           Console.ReadLine();
         }
       } else if (AskRepair == 'n' || AskRepair == 'N') {
