@@ -12,21 +12,30 @@ using Ikanustik.Weapons.Stangen;
 namespace Ikanustik {
 
   internal class WeaponStore {
-    private static readonly List<Waffe> _weapons = new List<Waffe>();
+    private static readonly List<Waffe> _waffen = new List<Waffe>();
 
-    public static List<Waffe> Weapons {
+    /// <summary>
+    /// Liste von Waffen zurück die im Store erhältlich sind.
+    /// </summary>
+    public static List<Waffe> Waffen {
       get {
-        return _weapons;
+        return _waffen;
       }
     }
 
+    /// <summary>
+    /// Statischer Konstruktor
+    /// </summary>
     static WeaponStore() {
-      AddWeaponsToShop();
+      InitStore();
     }
 
-    private static void AddWeaponsToShop() {
+    /// <summary>
+    /// Initialisiert den Store
+    /// </summary>
+    private static void InitStore() {
       // Äxte
-      Weapons.AddRange(new Waffe[] {
+      Waffen.AddRange(new Waffe[] {
         new AntikeSpießaxt(),
         new DerWolkenbrecher(),
         new Doppelaxt(),
@@ -39,7 +48,7 @@ namespace Ikanustik {
       });
 
       // Flegel
-      Weapons.AddRange(new Waffe[] {
+      Waffen.AddRange(new Waffe[] {
         new Archonsäule(),
         new BeidhändigerKriegshammer(),
         new Dreschflegel(),
@@ -52,7 +61,7 @@ namespace Ikanustik {
       });
 
       // Klingen
-      Weapons.AddRange(new Waffe[] {
+      Waffen.AddRange(new Waffe[] {
         new Breitschwert(),
         new Claymore(),
         new Dolch(),
@@ -65,7 +74,7 @@ namespace Ikanustik {
       });
 
       // Projektil
-      Weapons.AddRange(new Waffe[] {
+      Waffen.AddRange(new Waffe[] {
         new Balliste(),
         new EnglischerLangbogen(),
         new KleineArmbrust(),
@@ -78,7 +87,7 @@ namespace Ikanustik {
       });
 
       // Stangen
-      Weapons.AddRange(new Waffe[] {
+      Waffen.AddRange(new Waffe[] {
         new Bardike(),
         new Dreizack(),
         new Gleve(),
@@ -91,50 +100,27 @@ namespace Ikanustik {
       });
     }
 
+    /// <summary>
+    /// Gibt eine Liste an Waffen aus
+    /// </summary>
+    /// <param name="player">Der Spieler der mit dem Shop interargiert</param>
+    /// <param name="waffengattung">Waffengattung nach welcher gefiltert werden soll</param>
     private static void ShowWeapons(Player player, Waffengattung waffengattung) {
-      var weapons = (from weapon in Weapons
-                     where weapon.Waffengattung == waffengattung
-                     orderby weapon.Cost
-                     select weapon).ToList();
+      var waffen = (from waffe in Waffen
+                    where waffe.Waffengattung == waffengattung
+                    orderby waffe.Cost
+                    select waffe).ToList();
 
       Console.Clear();
       Menus.Bar();
       Console.WriteLine("\nWähle eine Waffe:\n");
-      for (int i = 0; i < weapons.Count; i++) {
-        Waffe w = weapons[i];
+      for (int i = 0; i < waffen.Count; i++) {
+        Waffe w = waffen[i];
         Console.WriteLine($"\t{i + 1}) {w.Name}\t\tKostet {w.Cost} Gold\t\t{w.MinDamage}-{w.MaxDamage} Schaden");
       }
       Console.WriteLine($"\n\t0) Keine Auswahl treffen...");
       Console.Write("\nWahl: ");
-      ChooseWeapon(player, weapons);
-    }
-
-    public static void Store(Player player) {
-      Console.Clear();
-      Menus.Bar();
-      Reinhart.ReinhartPortrait();
-      Console.Write($"Reinhart: \n\"Der aktuelle Schaden von {player.ActiveWeapon.Name} beträgt {player.ActiveWeapon.MinDamage}-{player.ActiveWeapon.MaxDamage} Schadenspunkte.");
-      Console.WriteLine($"\nDu hast momentan {player.Gold} Gold bei dir. Was möchtest du dir anschauen?\"\n\n\tk) Klingenwaffen\n\tf) Flegelwaffen\n\ts) Stangenwaffen\n\ta) Axtwaffen\n\tp) Projektilwaffen\n");
-      Console.WriteLine($"\tr) {player.ActiveWeapon.Name} reparieren\n\n\te) Nichts kaufen");
-      Console.Write("\nWahl: ");
-
-      char choose = Console.ReadKey(true).KeyChar;
-      if (choose == 'k') {
-        ShowWeapons(player, Waffengattung.Klingen);
-      } else if (choose == 'f') {
-        ShowWeapons(player, Waffengattung.Flegel);
-      } else if (choose == 's') {
-        ShowWeapons(player, Waffengattung.Stangen);
-      } else if (choose == 'a') {
-        ShowWeapons(player, Waffengattung.Axt);
-      } else if (choose == 'p') {
-        ShowWeapons(player, Waffengattung.Projektil);
-      } else if (choose == 'e') {
-        Console.WriteLine("\nKeine Auswahl getroffen.");
-        System.Threading.Thread.Sleep(2000);
-      } else if (choose == 'r') {
-        Reinhart.Repair(player);
-      }
+      ChooseWeapon(player, waffen);
     }
 
     private static void ChooseWeapon(Player player, IList<Waffe> waffen) {
@@ -162,6 +148,34 @@ namespace Ikanustik {
         }
       } else {
         Console.WriteLine("\nKeine Waffe ausgewählt!");
+      }
+    }
+
+    public static void Store(Player player) {
+      Console.Clear();
+      Menus.Bar();
+      Reinhart.ReinhartPortrait();
+      Console.Write($"Reinhart: \n\"Der aktuelle Schaden von {player.ActiveWeapon.Name} beträgt {player.ActiveWeapon.MinDamage}-{player.ActiveWeapon.MaxDamage} Schadenspunkte.");
+      Console.WriteLine($"\nDu hast momentan {player.Gold} Gold bei dir. Was möchtest du dir anschauen?\"\n\n\tk) Klingenwaffen\n\tf) Flegelwaffen\n\ts) Stangenwaffen\n\ta) Axtwaffen\n\tp) Projektilwaffen\n");
+      Console.WriteLine($"\tr) {player.ActiveWeapon.Name} reparieren\n\n\te) Nichts kaufen");
+      Console.Write("\nWahl: ");
+
+      char choose = Console.ReadKey(true).KeyChar;
+      if (choose == 'k') {
+        ShowWeapons(player, Waffengattung.Klingen);
+      } else if (choose == 'f') {
+        ShowWeapons(player, Waffengattung.Flegel);
+      } else if (choose == 's') {
+        ShowWeapons(player, Waffengattung.Stangen);
+      } else if (choose == 'a') {
+        ShowWeapons(player, Waffengattung.Axt);
+      } else if (choose == 'p') {
+        ShowWeapons(player, Waffengattung.Projektil);
+      } else if (choose == 'e') {
+        Console.WriteLine("\nKeine Auswahl getroffen.");
+        System.Threading.Thread.Sleep(2000);
+      } else if (choose == 'r') {
+        Reinhart.Repair(player);
       }
     }
   }
