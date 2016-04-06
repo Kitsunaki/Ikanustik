@@ -1,10 +1,10 @@
 ﻿namespace Ikanustik.Weapons.Axt {
 
-  internal class Doppelaxt : Weapon {
+  internal class Doppelaxt : Waffe {
 
     public Doppelaxt() {
       Name = "Schwere Doppelaxt";
-      Class = WeaponClass.Axt;
+      Waffengattung = Waffengattung.Axt;
       Durability = 60;
       FullDurability = 60;
       Cost = 1500;

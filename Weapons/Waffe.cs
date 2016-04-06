@@ -3,11 +3,11 @@ using Ikanustik.Entities;
 
 namespace Ikanustik.Weapons {
 
-  internal abstract class Weapon : ICloneable {
+  internal abstract class Waffe : ICloneable {
     private static Random RND = new Random();
 
-    public string Name { get; set; }
-    public WeaponClass Class { get; protected set; }
+    public string Name { get; protected set; }
+    public Waffengattung Waffengattung { get; protected set; }
     public int Cost { get; set; }
     public int Durability { get; set; }
     public int FullDurability { get; set; }
@@ -34,7 +34,7 @@ namespace Ikanustik.Weapons {
         }
 
         int EnemyDUR = 0;
-        if (player.ActiveWeapon.Class != WeaponClass.Projektil) {
+        if (player.ActiveWeapon.Waffengattung != Waffengattung.Projektil) {
           FullDamage = FullDamage * (100 - entity.Armor) / 100;
           EnemyDUR = entity.Armor;
         }
@@ -140,11 +140,6 @@ namespace Ikanustik.Weapons {
         System.Threading.Thread.Sleep(25);
       }
       Console.Clear();
-    }
-
-    protected static void AddWeaponToStore(Weapon weapon) {
-      if (!WeaponStore.Weapons.ContainsKey(weapon.Name))
-        WeaponStore.Weapons.Add(weapon.Name, weapon);
     }
 
     public object Clone() {

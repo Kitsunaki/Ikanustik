@@ -1,10 +1,10 @@
 ﻿namespace Ikanustik.Weapons.Flegel {
 
-  internal class GroßerMorgenstern : Weapon {
+  internal class GroßerMorgenstern : Waffe {
 
     public GroßerMorgenstern() {
       Name = "Großer Morgenstern";
-      Class = WeaponClass.Flegel;
+      Waffengattung = Waffengattung.Flegel;
       Durability = 115;
       Durability = 115;
       Cost = 280;

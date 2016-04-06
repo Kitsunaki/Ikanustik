@@ -1,10 +1,10 @@
 ﻿namespace Ikanustik.Weapons.Axt {
 
-  internal class LangeLochaber : Weapon {
+  internal class LangeLochaber : Waffe {
 
     public LangeLochaber() {
       Name = "Lange Lochaber";
-      Class = WeaponClass.Axt;
+      Waffengattung = Waffengattung.Axt;
       Durability = 68;
       FullDurability = 68;
       Cost = 3000;

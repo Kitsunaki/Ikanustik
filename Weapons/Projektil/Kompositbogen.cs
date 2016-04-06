@@ -1,10 +1,10 @@
 ﻿namespace Ikanustik.Weapons.Projektil {
 
-  internal class Kompositbogen : Weapon {
+  internal class Kompositbogen : Waffe {
 
     public Kompositbogen() {
       Name = "Kompositbogen";
-      Class = WeaponClass.Projektil;
+      Waffengattung = Waffengattung.Projektil;
       Durability = 60;
       FullDurability = 60;
       Cost = 300;

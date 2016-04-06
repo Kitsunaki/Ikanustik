@@ -1,10 +1,10 @@
 ﻿namespace Ikanustik.Weapons.Klingen {
 
-  internal class Krismesser : Weapon {
+  internal class Krismesser : Waffe {
 
     public Krismesser() {
       Name = "Krismesser";
-      Class = WeaponClass.Klingen;
+      Waffengattung = Waffengattung.Klingen;
       Durability = 15;
       FullDurability = 15;
       Cost = 35;

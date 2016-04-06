@@ -1,10 +1,10 @@
 ﻿namespace Ikanustik.Weapons.Flegel {
 
-  internal class Höllenschmiedenhammer : Weapon {
+  internal class Höllenschmiedenhammer : Waffe {
 
     public Höllenschmiedenhammer() {
       Name = "Höllenschmiedenhammer";
-      Class = WeaponClass.Flegel;
+      Waffengattung = Waffengattung.Flegel;
       Durability = 195;
       FullDurability = 195;
       Cost = 1980;

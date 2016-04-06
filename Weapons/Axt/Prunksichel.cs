@@ -1,10 +1,10 @@
 ﻿namespace Ikanustik.Weapons.Axt {
 
-  internal class Prunksichel : Weapon {
+  internal class Prunksichel : Waffe {
 
     public Prunksichel() {
       Name = "Prunksichel";
-      Class = WeaponClass.Axt;
+      Waffengattung = Waffengattung.Axt;
       Durability = 32;
       FullDurability = 32;
       Cost = 950;

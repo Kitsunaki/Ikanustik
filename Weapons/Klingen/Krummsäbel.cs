@@ -1,10 +1,10 @@
 ﻿namespace Ikanustik.Weapons.Klingen {
 
-  internal class Krummsäbel : Weapon {
+  internal class Krummsäbel : Waffe {
 
     public Krummsäbel() {
       Name = "Krummsäbel";
-      Class = WeaponClass.Klingen;
+      Waffengattung = Waffengattung.Klingen;
       Durability = 38;
       FullDurability = 38;
       Cost = 200;

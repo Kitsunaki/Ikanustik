@@ -1,10 +1,10 @@
 ﻿namespace Ikanustik.Weapons.Flegel {
 
-  internal class Streitkolben : Weapon {
+  internal class Streitkolben : Waffe {
 
     public Streitkolben() {
       Name = "Streitkolben";
-      Class = WeaponClass.Flegel;
+      Waffengattung = Waffengattung.Flegel;
       Durability = 90;
       Durability = 90;
       Cost = 110;

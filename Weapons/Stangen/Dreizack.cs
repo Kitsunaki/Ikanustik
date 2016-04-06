@@ -1,10 +1,10 @@
 ﻿namespace Ikanustik.Weapons.Stangen {
 
-  internal class Dreizack : Weapon {
+  internal class Dreizack : Waffe {
 
     public Dreizack() {
       Name = "Dreizack";
-      Class = WeaponClass.Stangen;
+      Waffengattung = Waffengattung.Stangen;
       Durability = 30;
       FullDurability = 30;
       Cost = 520;

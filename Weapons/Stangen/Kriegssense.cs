@@ -1,10 +1,10 @@
 ﻿namespace Ikanustik.Weapons.Stangen {
 
-  internal class Kriegssense : Weapon {
+  internal class Kriegssense : Waffe {
 
     public Kriegssense() {
       Name = "Kriegssense";
-      Class = WeaponClass.Stangen;
+      Waffengattung = Waffengattung.Stangen;
       Durability = 68;
       FullDurability = 68;
       Cost = 2100;

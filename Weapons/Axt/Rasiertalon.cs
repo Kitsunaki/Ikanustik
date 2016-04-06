@@ -1,10 +1,10 @@
 ﻿namespace Ikanustik.Weapons.Axt {
 
-  internal class Rasiertalon : Weapon {
+  internal class Rasiertalon : Waffe {
 
     public Rasiertalon() {
       Name = "Rasierklingentalon";
-      Class = WeaponClass.Axt;
+      Waffengattung = Waffengattung.Axt;
       Durability = 28;
       FullDurability = 28;
       Cost = 590;

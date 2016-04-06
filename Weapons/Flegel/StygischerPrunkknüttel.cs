@@ -1,10 +1,10 @@
 ﻿namespace Ikanustik.Weapons.Flegel {
 
-  internal class StygischerPrunkknüttel : Weapon {
+  internal class StygischerPrunkknüttel : Waffe {
 
     public StygischerPrunkknüttel() {
       Name = "Stygischer Prunkknüttel";
-      Class = WeaponClass.Flegel;
+      Waffengattung = Waffengattung.Flegel;
       Durability = 220;
       FullDurability = 220;
       Cost = 2520;

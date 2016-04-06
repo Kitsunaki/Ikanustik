@@ -1,10 +1,10 @@
 ﻿namespace Ikanustik.Weapons.Klingen {
 
-  internal class SchweresBastardschwert : Weapon {
+  internal class SchweresBastardschwert : Waffe {
 
     public SchweresBastardschwert() {
       Name = "Schweres Bastardschwert";
-      Class = WeaponClass.Klingen;
+      Waffengattung = Waffengattung.Klingen;
       Durability = 98;
       FullDurability = 98;
       Cost = 1600;

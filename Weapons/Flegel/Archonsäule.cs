@@ -1,8 +1,10 @@
 ﻿namespace Ikanustik.Weapons.Flegel {
-  internal class Archonsäule : Weapon {
+
+  internal class Archonsäule : Waffe {
+
     public Archonsäule() {
       Name = "Archonsäule";
-      Class = WeaponClass.Flegel | WeaponClass.Artefakt;
+      Waffengattung = Waffengattung.Flegel | Waffengattung.Artefakt;
       Durability = 280;
       FullDurability = 280;
       Cost = 4420;

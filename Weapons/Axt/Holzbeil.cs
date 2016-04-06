@@ -1,10 +1,10 @@
 ﻿namespace Ikanustik.Weapons.Axt {
 
-  internal class Holzbeil : Weapon {
+  internal class Holzbeil : Waffe {
 
     public Holzbeil() {
       Name = "Holzbeil";
-      Class = WeaponClass.Axt;
+      Waffengattung = Waffengattung.Axt;
       Durability = 11;
       FullDurability = 11;
       Cost = 40;

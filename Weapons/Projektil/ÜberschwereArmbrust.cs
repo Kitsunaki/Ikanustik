@@ -1,10 +1,10 @@
 ﻿namespace Ikanustik.Weapons.Projektil {
 
-  internal class ÜberschwereArmbrust : Weapon {
+  internal class ÜberschwereArmbrust : Waffe {
 
     public ÜberschwereArmbrust() {
       Name = "Überschwere Armbrust";
-      Class = WeaponClass.Projektil;
+      Waffengattung = Waffengattung.Projektil;
       Durability = 185;
       FullDurability = 185;
       Cost = 1250;

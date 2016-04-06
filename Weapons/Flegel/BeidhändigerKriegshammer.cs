@@ -1,10 +1,10 @@
 ﻿namespace Ikanustik.Weapons.Flegel {
 
-  internal class BeidhändigerKriegshammer : Weapon {
+  internal class BeidhändigerKriegshammer : Waffe {
 
     public BeidhändigerKriegshammer() {
       Name = "Beidhändiger Kriegshammer";
-      Class = WeaponClass.Flegel;
+      Waffengattung = Waffengattung.Flegel;
       Durability = 180;
       FullDurability = 180;
       Cost = 1050;

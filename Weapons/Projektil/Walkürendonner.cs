@@ -1,10 +1,10 @@
 ﻿namespace Ikanustik.Weapons.Projektil {
 
-  internal class Walkürendonner : Weapon {
+  internal class Walkürendonner : Waffe {
 
     public Walkürendonner() {
       Name = "Walkürendonner";
-      Class = WeaponClass.Projektil | WeaponClass.Artefakt;
+      Waffengattung = Waffengattung.Projektil | Waffengattung.Artefakt;
       Durability = 350;
       FullDurability = 350;
       Cost = 4000;

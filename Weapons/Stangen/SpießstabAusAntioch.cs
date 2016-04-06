@@ -1,10 +1,10 @@
 ﻿namespace Ikanustik.Weapons.Stangen {
 
-  internal class SpießstabAusAntioch : Weapon {
+  internal class SpießstabAusAntioch : Waffe {
 
     public SpießstabAusAntioch() {
       Name = "Spießstab aus Antioch";
-      Class = WeaponClass.Stangen | WeaponClass.Artefakt;
+      Waffengattung = Waffengattung.Stangen | Waffengattung.Artefakt;
       Durability = 85;
       FullDurability = 85;
       Cost = 4400;

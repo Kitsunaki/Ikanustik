@@ -1,10 +1,10 @@
 ﻿namespace Ikanustik.Weapons.Stangen {
 
-  internal class Hellebarde : Weapon {
+  internal class Hellebarde : Waffe {
 
     public Hellebarde() {
       Name = "Hellebarde";
-      Class = WeaponClass.Stangen;
+      Waffengattung = Waffengattung.Stangen;
       Durability = 59;
       FullDurability = 59;
       Cost = 1320;

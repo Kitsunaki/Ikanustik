@@ -249,7 +249,7 @@ namespace Ikanustik {
       Console.WriteLine($"{player.Name}:\n\n\t{player.Health}/{player.HealthPool} Lebenspunkte\t{player.Mana}/{player.ManaPool} Mana\n");
       Console.WriteLine($"\t{player.Stamina} Ausdauer\t\t{player.Satisfaction}% Genugtuung\n");
       Console.WriteLine($"\t{player.Strengh} Stärke\t\t{player.Resilienz} Resilienz\t\n");
-      Console.WriteLine($"{player.ActiveWeapon.Name} ({player.ActiveWeapon.Class}):\n");
+      Console.WriteLine($"{player.ActiveWeapon.Name} ({player.ActiveWeapon.Waffengattung}):\n");
       Console.WriteLine($"\t{player.ActiveWeapon.MinDamage}-{player.ActiveWeapon.MaxDamage} Schaden\t\t{player.ActiveWeapon.Durability} Haltbarkeit");
 
       Console.WriteLine("\n\n\n\tStarte den Angriff mit (a)!\tNutze Magie mit (m)!");

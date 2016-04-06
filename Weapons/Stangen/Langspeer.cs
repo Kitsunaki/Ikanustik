@@ -1,10 +1,10 @@
 ﻿namespace Ikanustik.Weapons.Stangen {
 
-  internal class Langspeer : Weapon {
+  internal class Langspeer : Waffe {
 
     public Langspeer() {
       Name = "Langspeer";
-      Class = WeaponClass.Stangen;
+      Waffengattung = Waffengattung.Stangen;
       Durability = 17;
       FullDurability = 17;
       Cost = 350;

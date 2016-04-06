@@ -1,10 +1,10 @@
 ﻿namespace Ikanustik.Weapons.Klingen {
 
-  internal class KolossalesFlamberg : Weapon {
+  internal class KolossalesFlamberg : Waffe {
 
     public KolossalesFlamberg() {
       Name = "Kolossales Flamberg";
-      Class = WeaponClass.Klingen;
+      Waffengattung = Waffengattung.Klingen;
       Durability = 105;
       FullDurability = 105;
       Cost = 3500;

@@ -1,10 +1,10 @@
 ﻿namespace Ikanustik.Weapons.Axt {
 
-  internal class Langaxt : Weapon {
+  internal class Langaxt : Waffe {
 
     public Langaxt() {
       Name = "Langaxt";
-      Class = WeaponClass.Axt;
+      Waffengattung = Waffengattung.Axt;
       Durability = 35;
       FullDurability = 35;
       Cost = 380;

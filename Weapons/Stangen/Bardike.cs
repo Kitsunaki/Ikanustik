@@ -1,10 +1,10 @@
 ﻿namespace Ikanustik.Weapons.Stangen {
 
-  internal class Bardike : Weapon {
+  internal class Bardike : Waffe {
 
     public Bardike() {
       Name = "Bardike";
-      Class = WeaponClass.Stangen;
+      Waffengattung = Waffengattung.Stangen;
       Durability = 45;
       FullDurability = 45;
       Cost = 800;

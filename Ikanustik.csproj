@@ -139,9 +139,9 @@
     <Compile Include="Weapons\Stangen\Kriegssense.cs" />
     <Compile Include="Weapons\Stangen\Harpunenlanze.cs" />
     <Compile Include="Weapons\Stangen\SpießstabAusAntioch.cs" />
-    <Compile Include="Weapons\Weapon.cs" />
+    <Compile Include="Weapons\Waffe.cs" />
     <Compile Include="WeaponStore.cs" />
-    <Compile Include="Weapons\WeaponClass.cs" />
+    <Compile Include="Weapons\Waffengattung.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />

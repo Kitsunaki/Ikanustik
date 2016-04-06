@@ -1,10 +1,10 @@
 ﻿namespace Ikanustik.Weapons.Axt {
 
-  internal class Spaltaxt : Weapon {
+  internal class Spaltaxt : Waffe {
 
     public Spaltaxt() {
       Name = "Spaltaxt";
-      Class = WeaponClass.Axt;
+      Waffengattung = Waffengattung.Axt;
       Durability = 25;
       FullDurability = 25;
       Cost = 180;

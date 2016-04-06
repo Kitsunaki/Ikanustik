@@ -9,7 +9,7 @@ namespace Ikanustik.Entities {
     public double Satisfaction { get; set; }
     public int Stamina { get; set; }
     public double Gold { get; set; }
-    public Weapon ActiveWeapon;
+    public Waffe ActiveWeapon;
     public int Strengh { get; set; }
     public int Resilienz { get; set; }
     public double Mana { get; set; }

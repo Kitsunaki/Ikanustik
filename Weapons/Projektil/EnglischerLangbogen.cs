@@ -1,10 +1,10 @@
 ﻿namespace Ikanustik.Weapons.Projektil {
 
-  internal class EnglischerLangbogen : Weapon {
+  internal class EnglischerLangbogen : Waffe {
 
     public EnglischerLangbogen() {
       Name = "Englischer Langbogen";
-      Class = WeaponClass.Projektil;
+      Waffengattung = Waffengattung.Projektil;
       Durability = 90;
       FullDurability = 90;
       Cost = 520;

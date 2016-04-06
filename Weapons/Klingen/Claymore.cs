@@ -1,10 +1,10 @@
 ﻿namespace Ikanustik.Weapons.Klingen {
 
-  internal class Claymore : Weapon {
+  internal class Claymore : Waffe {
 
     public Claymore() {
       Name = "Claymore";
-      Class = WeaponClass.Klingen;
+      Waffengattung = Waffengattung.Klingen;
       Durability = 83;
       FullDurability = 83;
       Cost = 900;

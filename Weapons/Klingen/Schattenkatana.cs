@@ -1,10 +1,10 @@
 ﻿namespace Ikanustik.Weapons.Klingen {
 
-  internal class Schattenkatana : Weapon {
+  internal class Schattenkatana : Waffe {
 
     public Schattenkatana() {
       Name = "Schattenstahlkatana";
-      Class = WeaponClass.Klingen | WeaponClass.Artefakt;
+      Waffengattung = Waffengattung.Klingen | Waffengattung.Artefakt;
       Durability = 108;
       FullDurability = 108;
       Cost = 7000;

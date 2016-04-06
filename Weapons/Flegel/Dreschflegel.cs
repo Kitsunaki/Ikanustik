@@ -1,10 +1,10 @@
 ﻿namespace Ikanustik.Weapons.Flegel {
 
-  internal class Dreschflegel : Weapon {
+  internal class Dreschflegel : Waffe {
 
     public Dreschflegel() {
       Name = "Dreschflegel";
-      Class = WeaponClass.Flegel;
+      Waffengattung = Waffengattung.Flegel;
       Durability = 35;
       Durability = 35;
       Cost = 75;

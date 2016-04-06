@@ -1,10 +1,10 @@
 ﻿namespace Ikanustik.Weapons.Projektil {
 
-  internal class Balliste : Weapon {
+  internal class Balliste : Waffe {
 
     public Balliste() {
       Name = "Balliste";
-      Class = WeaponClass.Projektil;
+      Waffengattung = Waffengattung.Projektil;
       Durability = 250;
       FullDurability = 250;
       Cost = 1800;

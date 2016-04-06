@@ -1,10 +1,10 @@
 ﻿namespace Ikanustik.Weapons.Klingen {
 
-  internal class Kurzschwert : Weapon {
+  internal class Kurzschwert : Waffe {
 
     public Kurzschwert() {
       Name = "Kurzschwert";
-      Class = WeaponClass.Klingen;
+      Waffengattung = Waffengattung.Klingen;
       Durability = 25;
       FullDurability = 25;
       Cost = 80;

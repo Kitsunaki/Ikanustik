@@ -34,7 +34,7 @@ namespace Ikanustik.Entities {
       Console.Write($"\tReinhart:\n\"");
 
       int RepairCost = player.ActiveWeapon.MinDamage * (player.ActiveWeapon.FullDurability - player.ActiveWeapon.Durability);
-      if (player.ActiveWeapon.Class == WeaponClass.Stangen) {
+      if (player.ActiveWeapon.Waffengattung == Waffengattung.Stangen) {
         RepairCost = RepairCost / 2;
       }
 

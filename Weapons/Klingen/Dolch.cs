@@ -1,10 +1,10 @@
 ﻿namespace Ikanustik.Weapons.Klingen {
 
-  internal class Dolch : Weapon {
+  internal class Dolch : Waffe {
 
     public Dolch() {
       Name = "Dolch";
-      Class = WeaponClass.Klingen;
+      Waffengattung = Waffengattung.Klingen;
       Durability = 10;
       FullDurability = 10;
       Cost = 0;

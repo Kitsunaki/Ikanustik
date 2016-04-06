@@ -1,10 +1,10 @@
 ﻿namespace Ikanustik.Weapons.Stangen {
 
-  internal class Gleve : Weapon {
+  internal class Gleve : Waffe {
 
     public Gleve() {
       Name = "Gleve";
-      Class = WeaponClass.Stangen;
+      Waffengattung = Waffengattung.Stangen;
       Durability = 11;
       FullDurability = 11;
       Cost = 150;

@@ -1,10 +1,10 @@
 ﻿namespace Ikanustik.Weapons.Axt {
 
-  internal class DerWolkenbrecher : Weapon {
+  internal class DerWolkenbrecher : Waffe {
 
     public DerWolkenbrecher() {
       Name = "Der Wolkenbrecher";
-      Class = WeaponClass.Axt | WeaponClass.Artefakt;
+      Waffengattung = Waffengattung.Axt | Waffengattung.Artefakt;
       Durability = 80;
       FullDurability = 80;
       Cost = 6200;

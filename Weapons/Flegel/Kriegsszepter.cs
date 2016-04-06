@@ -1,10 +1,10 @@
 ﻿namespace Ikanustik.Weapons.Flegel {
 
-  internal class Kriegsszepter : Weapon {
+  internal class Kriegsszepter : Waffe {
 
     public Kriegsszepter() {
       Name = "Kriegsszepter";
-      Class = WeaponClass.Flegel;
+      Waffengattung = Waffengattung.Flegel;
       Durability = 130;
       FullDurability = 130;
       Cost = 440;
