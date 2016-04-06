@@ -141,6 +141,7 @@
     <Compile Include="Weapons\Stangen\s009_Spießstab aus Antioch.cs" />
     <Compile Include="Weapons\Weapon.cs" />
     <Compile Include="WeaponStore.cs" />
+    <Compile Include="Weapons\WeaponClass.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
