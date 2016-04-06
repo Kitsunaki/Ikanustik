@@ -39,6 +39,9 @@
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
     <UseVSHostingProcess>false</UseVSHostingProcess>
+    <TreatWarningsAsErrors>true</TreatWarningsAsErrors>
+    <Prefer32Bit>false</Prefer32Bit>
+    <RunCodeAnalysis>true</RunCodeAnalysis>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
     <PlatformTarget>AnyCPU</PlatformTarget>
@@ -48,6 +51,9 @@
     <DefineConstants>TRACE</DefineConstants>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup>
+    <StartupObject>Ikanustik.Game</StartupObject>
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="System" />
@@ -87,52 +93,52 @@
     <Compile Include="Menu.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Entities\Player.cs" />
-    <Compile Include="Weapons\p009_Walkürendonner.cs" />
-    <Compile Include="Weapons\a003_Langaxt.cs" />
-    <Compile Include="Weapons\a001_Holzbeil.cs" />
-    <Compile Include="Weapons\a002_Spaltaxt.cs" />
-    <Compile Include="Weapons\a004_Rasiertalon.cs" />
-    <Compile Include="Weapons\a005_Prunksichel.cs" />
-    <Compile Include="Weapons\a006_Doppelaxt.cs" />
-    <Compile Include="Weapons\a007_Lange Lochaber.cs" />
-    <Compile Include="Weapons\a008_Antike Spießaxt.cs" />
-    <Compile Include="Weapons\a009_Der Wolkenbrecher.cs" />
-    <Compile Include="Weapons\f002_Dreschflegel.cs" />
-    <Compile Include="Weapons\f004_Großer Morgenstern.cs" />
-    <Compile Include="Weapons\f008_Stygischer Prunkknüttel.cs" />
-    <Compile Include="Weapons\f009_Archonsäule.cs" />
+    <Compile Include="Weapons\Projektil\p009_Walkürendonner.cs" />
+    <Compile Include="Weapons\Axt\a003_Langaxt.cs" />
+    <Compile Include="Weapons\Axt\a001_Holzbeil.cs" />
+    <Compile Include="Weapons\Axt\a002_Spaltaxt.cs" />
+    <Compile Include="Weapons\Axt\a004_Rasiertalon.cs" />
+    <Compile Include="Weapons\Axt\a005_Prunksichel.cs" />
+    <Compile Include="Weapons\Axt\a006_Doppelaxt.cs" />
+    <Compile Include="Weapons\Axt\a007_Lange Lochaber.cs" />
+    <Compile Include="Weapons\Axt\a008_Antike Spießaxt.cs" />
+    <Compile Include="Weapons\Axt\a009_Der Wolkenbrecher.cs" />
+    <Compile Include="Weapons\Flegel\f002_Dreschflegel.cs" />
+    <Compile Include="Weapons\Flegel\f004_Großer Morgenstern.cs" />
+    <Compile Include="Weapons\Flegel\f008_Stygischer Prunkknüttel.cs" />
+    <Compile Include="Weapons\Flegel\f009_Archonsäule.cs" />
     <Compile Include="Weapons\Faust.cs" />
-    <Compile Include="Weapons\k009_Schattenkatana.cs" />
-    <Compile Include="Weapons\p001_Leichter Bogen.cs" />
-    <Compile Include="Weapons\p002_Kleine Armbrust.cs" />
-    <Compile Include="Weapons\p003_Kompositbogen.cs" />
-    <Compile Include="Weapons\p004_Englischer Langbogen.cs" />
-    <Compile Include="Weapons\p005_Kriegsbogen.cs" />
-    <Compile Include="Weapons\p006_Überschwere Armbrust.cs" />
-    <Compile Include="Weapons\p007_Balliste.cs" />
-    <Compile Include="Weapons\p008_Silber-Baliste.cs" />
-    <Compile Include="Weapons\s004_Dreizack.cs" />
-    <Compile Include="Weapons\f005_Kriegsszepter.cs" />
-    <Compile Include="Weapons\f006_Beidhändiger Kriegshammer.cs" />
-    <Compile Include="Weapons\f007_Höllenschmiedenhammer.cs" />
-    <Compile Include="Weapons\k006_Claymore.cs" />
-    <Compile Include="Weapons\k005_Breitschwert.cs" />
-    <Compile Include="Weapons\k001_Dolch.cs" />
-    <Compile Include="Weapons\k002_Krismesser.cs" />
-    <Compile Include="Weapons\k003_Kurzschwert.cs" />
-    <Compile Include="Weapons\k004_Krummsäbel.cs" />
-    <Compile Include="Weapons\k007_Schweres Bastardschwert.cs" />
-    <Compile Include="Weapons\k008_Kolossales Flamberg.cs" />
-    <Compile Include="Weapons\f001_Schmiedehammer.cs" />
-    <Compile Include="Weapons\f003_Streitkolben.cs" />
-    <Compile Include="Weapons\s001_Langstab.cs" />
-    <Compile Include="Weapons\s002_Gleve.cs" />
-    <Compile Include="Weapons\s003_Langspeer.cs" />
-    <Compile Include="Weapons\s005_Bardike.cs" />
-    <Compile Include="Weapons\s006_Hellebarde.cs" />
-    <Compile Include="Weapons\s007_Kriegssense.cs" />
-    <Compile Include="Weapons\s008_Harpunenlanze.cs" />
-    <Compile Include="Weapons\s009_Spießstab aus Antioch.cs" />
+    <Compile Include="Weapons\Klingen\k009_Schattenkatana.cs" />
+    <Compile Include="Weapons\Projektil\p001_Leichter Bogen.cs" />
+    <Compile Include="Weapons\Projektil\p002_Kleine Armbrust.cs" />
+    <Compile Include="Weapons\Projektil\p003_Kompositbogen.cs" />
+    <Compile Include="Weapons\Projektil\p004_Englischer Langbogen.cs" />
+    <Compile Include="Weapons\Projektil\p005_Kriegsbogen.cs" />
+    <Compile Include="Weapons\Projektil\p006_Überschwere Armbrust.cs" />
+    <Compile Include="Weapons\Projektil\p007_Balliste.cs" />
+    <Compile Include="Weapons\Projektil\p008_Silber-Baliste.cs" />
+    <Compile Include="Weapons\Stangen\s004_Dreizack.cs" />
+    <Compile Include="Weapons\Flegel\f005_Kriegsszepter.cs" />
+    <Compile Include="Weapons\Flegel\f006_Beidhändiger Kriegshammer.cs" />
+    <Compile Include="Weapons\Flegel\f007_Höllenschmiedenhammer.cs" />
+    <Compile Include="Weapons\Klingen\k006_Claymore.cs" />
+    <Compile Include="Weapons\Klingen\k005_Breitschwert.cs" />
+    <Compile Include="Weapons\Klingen\k001_Dolch.cs" />
+    <Compile Include="Weapons\Klingen\k002_Krismesser.cs" />
+    <Compile Include="Weapons\Klingen\k003_Kurzschwert.cs" />
+    <Compile Include="Weapons\Klingen\k004_Krummsäbel.cs" />
+    <Compile Include="Weapons\Klingen\k007_Schweres Bastardschwert.cs" />
+    <Compile Include="Weapons\Klingen\k008_Kolossales Flamberg.cs" />
+    <Compile Include="Weapons\Flegel\f001_Schmiedehammer.cs" />
+    <Compile Include="Weapons\Flegel\f003_Streitkolben.cs" />
+    <Compile Include="Weapons\Stangen\s001_Langstab.cs" />
+    <Compile Include="Weapons\Stangen\s002_Gleve.cs" />
+    <Compile Include="Weapons\Stangen\s003_Langspeer.cs" />
+    <Compile Include="Weapons\Stangen\s005_Bardike.cs" />
+    <Compile Include="Weapons\Stangen\s006_Hellebarde.cs" />
+    <Compile Include="Weapons\Stangen\s007_Kriegssense.cs" />
+    <Compile Include="Weapons\Stangen\s008_Harpunenlanze.cs" />
+    <Compile Include="Weapons\Stangen\s009_Spießstab aus Antioch.cs" />
     <Compile Include="Weapons\Weapon.cs" />
     <Compile Include="WeaponStore.cs" />
   </ItemGroup>

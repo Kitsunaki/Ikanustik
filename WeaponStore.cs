@@ -10,9 +10,9 @@ namespace Ikanustik {
       Console.Clear();
       Menus.Bar();
       Reinhart.ReinhartPortrait();
-      Console.Write($"Reinhart: \n\"Der aktuelle Schaden von {player.Active_Weapon.Weapon_Name} beträgt {player.Active_Weapon.Min_Damage}-{player.Active_Weapon.Max_Damage} Schadenspunkte.");
+      Console.Write($"Reinhart: \n\"Der aktuelle Schaden von {player.Active_Weapon.Name} beträgt {player.Active_Weapon.MinDamage}-{player.Active_Weapon.MaxDamage} Schadenspunkte.");
       Console.WriteLine($"\nDu hast momentan {player.Gold} Gold bei dir. Was möchtest du dir anschauen?\"\n\n\tk) Klingenwaffen\n\tf) Flegelwaffen\n\ts) Stangenwaffen\n\ta) Axtwaffen\n\tp) Projektilwaffen\n");
-      Console.WriteLine($"\tr) {player.Active_Weapon.Weapon_Name} reparieren\n\n\te) Nichts kaufen");
+      Console.WriteLine($"\tr) {player.Active_Weapon.Name} reparieren\n\n\te) Nichts kaufen");
       Console.Write("\nWahl: ");
 
       char choose = Console.ReadKey(true).KeyChar;
@@ -150,16 +150,16 @@ namespace Ikanustik {
       if (weapon == 0) {
         Console.Clear();
         Console.Write(new string('\n', 10));
-        Console.WriteLine($"\t\t\tDu behälst {player.Active_Weapon.Weapon_Name} als aktive Waffe!");
+        Console.WriteLine($"\t\t\tDu behälst {player.Active_Weapon.Name} als aktive Waffe!");
         System.Threading.Thread.Sleep(2000);
-      } else if (player.Gold >= hand.Weapon_Cost) {
+      } else if (player.Gold >= hand.Cost) {
         player.Active_Weapon = hand;
-        player.Gold -= hand.Weapon_Cost;
+        player.Gold -= hand.Cost;
         Console.Clear();
         Console.Write(new String('\n', 10));
-        Console.WriteLine($"\t\t\t{player.Active_Weapon.Weapon_Name} wurde ausgewählt!");
+        Console.WriteLine($"\t\t\t{player.Active_Weapon.Name} wurde ausgewählt!");
         System.Threading.Thread.Sleep(2500);
-      } else if (player.Gold <= hand.Weapon_Cost) {
+      } else if (player.Gold <= hand.Cost) {
         Console.Clear();
         Console.Write(new String('\n', 10));
         Console.WriteLine("Dafür reicht dein Vermögen leider nicht aus!");
@@ -214,16 +214,16 @@ namespace Ikanustik {
       if (weapon == 0) {
         Console.Clear();
         Console.Write(new string('\n', 10));
-        Console.WriteLine($"\t\t\tDu behälst {player.Active_Weapon.Weapon_Name} als aktive Waffe!");
+        Console.WriteLine($"\t\t\tDu behälst {player.Active_Weapon.Name} als aktive Waffe!");
         System.Threading.Thread.Sleep(2000);
-      } else if (player.Gold >= hand.Weapon_Cost) {
+      } else if (player.Gold >= hand.Cost) {
         player.Active_Weapon = hand;
-        player.Gold -= hand.Weapon_Cost;
+        player.Gold -= hand.Cost;
         Console.Clear();
         Console.Write(new String('\n', 10));
-        Console.WriteLine($"\t\t\t{player.Active_Weapon.Weapon_Name} wurde ausgewählt!");
+        Console.WriteLine($"\t\t\t{player.Active_Weapon.Name} wurde ausgewählt!");
         System.Threading.Thread.Sleep(2500);
-      } else if (player.Gold <= hand.Weapon_Cost) {
+      } else if (player.Gold <= hand.Cost) {
         Console.Clear();
         Console.Write(new String('\n', 10));
         Console.WriteLine("Dafür reicht dein Vermögen leider nicht aus!");
@@ -278,16 +278,16 @@ namespace Ikanustik {
       if (weapon == 0) {
         Console.Clear();
         Console.Write(new string('\n', 10));
-        Console.WriteLine($"\t\t\tDu behälst {player.Active_Weapon.Weapon_Name} als aktive Waffe!");
+        Console.WriteLine($"\t\t\tDu behälst {player.Active_Weapon.Name} als aktive Waffe!");
         System.Threading.Thread.Sleep(2000);
-      } else if (player.Gold >= hand.Weapon_Cost) {
+      } else if (player.Gold >= hand.Cost) {
         player.Active_Weapon = hand;
-        player.Gold -= hand.Weapon_Cost;
+        player.Gold -= hand.Cost;
         Console.Clear();
         Console.Write(new String('\n', 10));
-        Console.WriteLine($"\t\t\t{player.Active_Weapon.Weapon_Name} wurde ausgewählt!");
+        Console.WriteLine($"\t\t\t{player.Active_Weapon.Name} wurde ausgewählt!");
         System.Threading.Thread.Sleep(2500);
-      } else if (player.Gold <= hand.Weapon_Cost) {
+      } else if (player.Gold <= hand.Cost) {
         Console.Clear();
         Console.Write(new String('\n', 10));
         Console.WriteLine("Dafür reicht dein Vermögen leider nicht aus!");
@@ -345,16 +345,16 @@ namespace Ikanustik {
       if (weapon == 0) {
         Console.Clear();
         Console.Write(new string('\n', 10));
-        Console.WriteLine($"\t\t\tDu behälst {player.Active_Weapon.Weapon_Name} als aktive Waffe!");
+        Console.WriteLine($"\t\t\tDu behälst {player.Active_Weapon.Name} als aktive Waffe!");
         System.Threading.Thread.Sleep(2000);
-      } else if (player.Gold >= hand.Weapon_Cost) {
+      } else if (player.Gold >= hand.Cost) {
         player.Active_Weapon = hand;
-        player.Gold -= hand.Weapon_Cost;
+        player.Gold -= hand.Cost;
         Console.Clear();
         Console.Write(new String('\n', 10));
-        Console.WriteLine($"\t\t\t{player.Active_Weapon.Weapon_Name} wurde ausgewählt!");
+        Console.WriteLine($"\t\t\t{player.Active_Weapon.Name} wurde ausgewählt!");
         System.Threading.Thread.Sleep(2500);
-      } else if (player.Gold <= hand.Weapon_Cost) {
+      } else if (player.Gold <= hand.Cost) {
         Console.Clear();
         Console.Write(new String('\n', 10));
         Console.WriteLine("Dafür reicht dein Vermögen leider nicht aus!");
@@ -412,16 +412,16 @@ namespace Ikanustik {
       if (weapon == 0) {
         Console.Clear();
         Console.Write(new string('\n', 10));
-        Console.WriteLine($"\t\t\tDu behälst {player.Active_Weapon.Weapon_Name} als aktive Waffe!");
+        Console.WriteLine($"\t\t\tDu behälst {player.Active_Weapon.Name} als aktive Waffe!");
         System.Threading.Thread.Sleep(2000);
-      } else if (player.Gold >= hand.Weapon_Cost) {
+      } else if (player.Gold >= hand.Cost) {
         player.Active_Weapon = hand;
-        player.Gold -= hand.Weapon_Cost;
+        player.Gold -= hand.Cost;
         Console.Clear();
         Console.Write(new String('\n', 10));
-        Console.WriteLine($"\t\t\t{player.Active_Weapon.Weapon_Name} wurde ausgewählt!");
+        Console.WriteLine($"\t\t\t{player.Active_Weapon.Name} wurde ausgewählt!");
         System.Threading.Thread.Sleep(2500);
-      } else if (player.Gold <= hand.Weapon_Cost) {
+      } else if (player.Gold <= hand.Cost) {
         Console.Clear();
         Console.Write(new String('\n', 10));
         Console.WriteLine("Dafür reicht dein Vermögen leider nicht aus!");
