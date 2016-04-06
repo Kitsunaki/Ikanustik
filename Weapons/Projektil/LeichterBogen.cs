@@ -1,4 +1,4 @@
-﻿namespace Ikanustik.Weapons {
+﻿namespace Ikanustik.Weapons.Projektil {
 
   internal class LeichterBogen : Weapon {
 
