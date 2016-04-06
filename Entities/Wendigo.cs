@@ -9,11 +9,16 @@ namespace Ikanustik.Entities {
       HealthPool = 30;
       Regeneration = 2;
       Name = "Wendigo";
-      Damage = 2;
+      DamageMin = 1;
+      DamageMax = 2;
     }
 
     private static void Clash() {
       Console.WriteLine("Ein Wendigo taucht auf. Eine fleischfressende Bestie mit einem Herz aus Eis. \nAlso so etwas Ähnliches wie eine Stiefmutter.");
+    }
+
+    public override void Clash(Player player) {
+      throw new NotImplementedException();
     }
   }
 }

@@ -1,47 +1,57 @@
 ﻿using System;
-using Ikanustik.Weapons;
 
 namespace Ikanustik.Entities {
 
   internal class Stepmother : Entity {
 
     public Stepmother() {
-      Health = 15;
-      HealthPool = 15;
+      Health = 6;
+      HealthPool = 6;
       Regeneration = 0;
       Name = "Stiefmutter";
-      Damage = 0;
+      DamageMin = 0;
+      DamageMax = 0;
+      MinGetGold = 2;
+      MaxGetGold = 4;
+      ExpMin = 2;
+      ExpMax = 5;
+      Armor = 0;
     }
 
-    public void Clash(Player user, Weapon weapon) {
-      Console.WriteLine("Ein Gegner taucht auf. Nur die Hölle kann ihn geschickt haben!");
-      System.Threading.Thread.Sleep(1000);
+    public override void Clash(Player player) {
       Console.Clear();
-      Console.WriteLine("Gegner:");
-      Console.WriteLine("\t" + Name + "\t" + Health + "/" + HealthPool + " Lebenspunkte\t" + Regeneration + " Selbstheilung\n");
-      Console.WriteLine(user.Name + ": ");
-      Console.WriteLine("\t" + user.Satisfaction + " Genugtuung\t" + user.Health + "/" + user.HealthPool + " Lebenspunkte\t" + user.Stamina + " Ausdauer");
-      Console.WriteLine(/*Waffe*/);
-
-      Console.WriteLine("\nStarte den Angriff mit a!");
-      char fight = Console.ReadKey(true).KeyChar;
-      if (fight == 'a') {
-        Console.Clear();
-        Menus.Bar();
-        Random hitr = new Random();
-        int hit = hitr.Next(2, user.Stamina);
-        for (int i = 0; i < (hit - 1); i++) {
-          weapon.Attack(user);
-          Console.WriteLine("TREFFER! " + Name + " behält {0:0} Lebenspunkte. Gold steigt auf {1,2}!", Health, user.Gold);
-        }
-      } else {
-        Console.WriteLine("Kein Angriff diese Runde!");
+      StepPortrait();
+      Console.WriteLine($"\n\n{Name} taucht auf. Nur die Hölle kann dafür verantwortlich sein!");
+      System.Threading.Thread.Sleep(4400);
+      Console.Clear();
+      while (Health > 0 && player.Health > 0) {
+        Menus.ClashMenu(player, this);
       }
-      //Wenn Lebenspunkte unter 0
-      Console.WriteLine(Name + " wurde besiegt. Weiter mit Enter!");
-      user.Gold = user.Gold + 3;
-      Console.ReadLine();
-      Console.Clear();
+      if (player.Health > 0) {
+        Menus.Victory(player, this);
+      } else if (player.Health < 1) {
+        Menus.Loose(player, this);
+      }
+    }
+
+    public static void StepPortrait() {
+      Console.WriteLine("        /  /|");
+      Console.WriteLine("    /     /   /  \\ \\");
+      Console.WriteLine("  /  /  / / /  | \\ \\ \\");
+      Console.WriteLine("   /    / / ||       \\");
+      Console.WriteLine("          |           \\");
+      Console.WriteLine("                       |");
+      Console.WriteLine("           /- -\\    /-\\");
+      Console.WriteLine("   -    - / __ _   / __|");
+      Console.WriteLine(" / -        /\\| \\    |/");
+      Console.WriteLine(" | /         _ /   \\  -\\");
+      Console.WriteLine("  \\     \\           |  /");
+      Console.WriteLine("    -    |       / /  |");
+      Console.WriteLine("                     \\");
+      Console.WriteLine("       \\     | _---- |");
+      Console.WriteLine("               - --  /");
+      Console.WriteLine("           -        -");
+      Console.WriteLine("             \\   _ /");
     }
   }
 }

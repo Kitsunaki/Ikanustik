@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Linq;
 using Ikanustik.Entities;
+using Ikanustik.Entities._01Schwarzwald;
 
 namespace Ikanustik {
 
@@ -10,15 +11,81 @@ namespace Ikanustik {
 
       #region Einleitung
 
-      string version = "1.8.2";
-      double zeilen = 160321;
+      string version = "1.8.6";
+      double zeilen = 160403;
 
+      Console.SetWindowSize(80, 50);
       Player player = new Player();
-
-      Console.Write("\nHallo! Ich bin ein Programm und heiße Ikanustik, wie ist dein Name: ");
+      Console.WriteLine("Liebe Grüße vom Entwickler. Viel Spaß im Spiel!");
+      Console.ReadLine();
+      Console.Write("MMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMM");
+      Console.Write("MMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMM");
+      Console.Write("MMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMM");
+      Console.Write("MMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMM");
+      Console.Write("MMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMM");
+      Console.Write("MMMMMMMMMMMMMMMMMMMMMMMMMNNMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMM");
+      Console.Write("MMMMMMMMMMMMMMMMMMMMMMMMMMMMNMMMMMMMMMMMMMMMMMMMMMMMMMMNMMMMMMMMMMMMMMMMMMMMMMMM");
+      Console.Write("MMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMNMMMMMMNMMDMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMM");
+      Console.Write("MMMMMMMMMMMMMMMMMMMMMMMNMNMMMMMMMMMMMMMMMMMMMMMDMNNMMMMMMDMMMMMMMMMMMMMMMDMMMMMM");
+      Console.Write("MMMMMMMMMMMMMMMMMMMMMMNMMMMMMMMMMMMMMMMMMMMMMNMMNMMMNMMNMMNMDMMMNMMMMMMMMMNMMMMM");
+      Console.Write("MMMMMMMMMMMMMMMMMMMMMNMMMMMMMMMMNMMMMMMMMMMMMNMNNNMMMMNMMMNNMNMMMMMMMMMMMNMMMMMM");
+      Console.Write("MMMMMMMMMMMMMMMMMMMMMNMMMMMMMMMMMMMMMMMMMNMMDNNDDNMNNNNNN8DNNNMMMMMMMMMMMMNMMMMM");
+      Console.Write("MMMMMMMMMMMMMMMMMMMMMMMMMNMMMMMNMMMMMMNMNNNNNDDDNNNNNNDDDDNDNDNNMNMMMMMMMMNMMMMM");
+      Console.Write("MMMMMMMMMMMMMMMMMMMMMMMNNMMMMMMNMMMMMMMMNZNNDNNNZDDNNDDOO8DDO88DDNM8MMMMMMNMMMMM");
+      Console.Write("MMMMMMMMMMMMMMMMMMMMNMMMNMMMMMMMMMMMMMMNMDDDNDDDNDDN8$D8O8O8ZZZD88NODNMMMMDMMMMM");
+      Console.Write("MMMMMMMMMMMMMMMMMMMMMMMMDNMNMMNMNMMMMMMNM8DDDDN88D8DDZO8Z8888ODOZODZIDDNMNDMMMMM");
+      Console.Write("MMMMMMMMMMMMMMMMMMMMMMMMNNNNNMDNMMNDMNDMNNMN8D8DZNZ8OO88D88D8DNOOO?DZ8ONDDOMMMMM");
+      Console.Write("MMMMMMMMMMMMMMMMMMMMMMMMMNDND8MMMMMMNDMNDNNNDDD8DOZ8D88DDDDDNNNNNDMMNNNNONMMMMMM");
+      Console.Write("MMMMMMMMMMMMMMMMMMMMMMMNNDDM8Z8MMMMMMMDONDN8D8NNDZ88ODNNNMMMM8N$MMMMMMMMDOMMMMMM");
+      Console.Write("MMMMMMMMMMMMMMMMMMMMMMMMMDNNNZ8DMMDMMON$ZIO8$IZ8ZZO88DODMMMMMMMMNMNMMNMNMNMMMMMM");
+      Console.Write("MMMMMMMMMMMMMMMMMMMMMMMMNN8NNDD8NNDNNMDDDZZ8DZZZD8OO8N8MNNMMMMMMMMMMMMMMMMMMMMMM");
+      Console.Write("MMMMMMMMMMMMMMMMMMMMMMMMNNDNMDMD88D8Z$8?7$77?$$I$$$$+=7O8DDMMMMMMMMMMMNMMMMMMMMM");
+      Console.Write("MMMMMMMMMMMMMMMMMMMMMMMMNNNNMN8N$ZD8==?++Z:8DN$,+=I+=~~:~~+ONMMMMMMMMMMMNMMMMMMM");
+      Console.Write("MMMMMMMMMMMMMMMMMMMMMMMMMMNDNNMMDOD7$~~:~~,:8$..::::=~:,,:~8=DMNNNMMMMMMMMMMMMMM");
+      Console.Write("MMMMMMMMMMMMMMMMMMMMMMMNMMMMNNMNNNODZ=:,::=::::~~:,:::,,.,====+78DMMMMMMMMMMMMMM");
+      Console.Write("MMMMMMMMMMMMMMMMMMMMMMMMMMMMNNMMNNO=+:,,,,,,:,,,,,,:::,,.,~=~~==+$8NMMMMMMMMMMMM");
+      Console.Write("MMMMMMMMMMMMMMMMMMMMMMMMMMMMMMDND?=~~:,,,,,,,,,,,,::::,,.,:+~:~~+??NMMMMMMMMMMMM");
+      Console.Write("MMMMMMMMMMMMMMMMMMMMMMMMMMMMMMD7?+==~::,,,,,,,,,,,:,,,,,..:+~~~~=+7MMMMMMMMMMMMM");
+      Console.Write("MMMMMMMMMMMMMMMMMMMMMMMMMMNMMMZ??++~~:::,,,,,,,,,::,,,,,..:?~::~=INNNNDMMMMMMMMM");
+      Console.Write("MMMMMMMMMMMMMMMMMMMMMMMMMMMMMM$??+=~~~::,,,,,,,,,:::::,,..,+~~~=?8N8OO$?DMMMMMMM");
+      Console.Write("MMMMMMMMMMMMMMMMMMMMMMMMMMMMMMD??+==~~:::,,,,,,,:~~:::,,,.,~~~=?DMZ+=++==MMMMMMM");
+      Console.Write("MMMMMMMMMMMMMMMMMMMMMMMMMMMMMMOI++==~~:::,,,,,,,,~::::,,,.,:?+?DMN~:::::~MMMMMMM");
+      Console.Write("MMMMMMMMMMMMMMMMMMMMMMMMMMMMM77D?++==~~~::,,,,,,,:===~::,,,~O?ZMM=::::::~MMMMMMM");
+      Console.Write("MMMMMMMMMMMMMMMMMMMMMMMMMMMM,?I7$?+===~~~::,,,,,,,,,,::?=~+D+IMM=::::::~=MMMMMMM");
+      Console.Write("MMMMMMMMMMMMMMMMMMMMMMMMMMMZ$+?+7Z?++==~~~:,:,,,,,,,,,:::=+??8M+::::::::=MMMMMMM");
+      Console.Write("MMMMMMMMMMMMMMMMMMMMMMMMMM.O+=+++?O?+====~~::::::,,,.,,::=?7IMI~~:::::::=MMMMMMM");
+      Console.Write("MMMMMMMMMMMMMMMMMMMMMMMMZ,D+=~+==+=Z?+++==~~~~~~I7I7II+7$I+7MI::::~::::::MMMMMMM");
+      Console.Write("MMMMMMMMMMMMMMMMMMMMMMM?,,+=~~==~=~~$$+===~~~:::~~~::~~~+?$NN:~:::::::::~MMMMMMM");
+      Console.Write("MMMMMMMMMMMMMMMMMMMMMM?:,,,~:~~~~~=~~?Z?==~~~~~~~~~=++I+?$8N7:~~~:::::::~MMMMMMM");
+      Console.Write("MMMMMMMMMMMMMMMMMMMMM~=Z,,..,::::~~~~~=Z+=~~::::~:~~~~~++IN?:,=:::::::~::MMMMMMM");
+      Console.Write("MMMMMMMMMMMMMMMMMMM8~=~I,,....::::::~~~~ZZ=~~:::,,::::~~+O$=~,~::::::~~:~$MMMMMM");
+      Console.Write("MMMMMMMMMMMMMMMMMMI~=,,.........:::::::~~7Z+=~::::::~~~+7D~:,~:::,:::::::=MMMMMM");
+      Console.Write("MMMMMMMMMMMMMMMMM7=,,,,,.........,.,:::::~+ZOZ?=====++IND~:.,:,::::::::::~MMMMMM");
+      Console.Write("MMMMMMMMMMMMMMMM?~:,,................,..,,,,ZDDNNNDDDNND~,,:,,,,,:::::::~~7MMMMM");
+      Console.Write("MMMMMMMMMMMMMMMI::~,,,.................,......+8DDNNNN7,,:~,,,,::==:=+::~:~MMMMM");
+      Console.Write("MMMMMMMMMMMMMM=~=~,,..............................,,,,,,:,,,,,,=::::::::~~~MMMMM");
+      Console.Write("MMMMMMMMMMMMM+:....=..............................,,,,,,,,,,,~,,~,:+?:::~:~8MMMM");
+      Console.Write("MMMMMMMMMMMM:...................................,...,,,,,,,,::,:,~:==,~::~~~MMMM");
+      Console.Write("MMMMMMMMN,,........................................,,,,,,,,,,:,+,::::::::~~~8MMM");
+      Console.Write("MMMMMM7,,.........,...............................,,,,,,,,:,,,,+,:,=:,::,~+~+MMM");
+      Console.Write("MMMMM:,.....,.,...................,,,...............,,,,,,,,:,:,:::,,::::~I+~MMM");
+      Console.Write("MMMM,,,.,,,,..........,......,...................,..,,,,,,,,::,,,,:,,,::::I~~ZMM");
+      Console.Write("MMM.,,,,...........,,....,,,,,...,..............,.,,,,,,,,,,:,,:,:,=,:+:+:::~~MM");
+      Console.Write("MM:,,..,,,,,,........,......,..................,,,,,,,,:,,,,,,,,,,~,:,7:::::~~MM");
+      Console.Write("M=..,,,,,,.,,,...,.............,................,,,,,,,,,,:,,,,,,=,,=::,~::::~NM");
+      Console.Write("O,,,~,,,,,,....,,..,..........................,...,,,,,,,,,,,,,,,,,,,,~:~:==:~IM");
+      Console.Write("\nWie ist dein Name: ");
       player.Name = Console.ReadLine();
+      if (player.Name == "") {
+        Console.Clear();
+        Console.Write(new String('\n', 10));
+        Console.WriteLine("Da du zu doof bist, einen Namen einzugeben, nenne ich dich einfach \"Horst!\"");
+        System.Threading.Thread.Sleep(4400);
+        player.Name = "Horst";
+        Console.Clear();
+      }
       player.Score++;
-      Console.Write("\nUnd welches Geschlecht hast du? (m)ännlich oder (w)eiblich? Bitte eingeben: ");
+      Console.Write("\nWelches Geschlecht hast du? (m)ännlich oder (w)eiblich? Bitte eingeben: ");
       string gend = Console.ReadLine();
       string anred = "Yo";
       player.Score++;
@@ -28,7 +95,7 @@ namespace Ikanustik {
         anred = "Frau";
       }
       Console.WriteLine("\nFreut mich " + anred + " " + player + ". Dein Punktestand beträgt erst " + player.Score + " Punkte. Drücke Enter, um \nins Hauptmenü zu gelangen!\n");
-      Console.WriteLine("Wähle dort das gewünschte Kapitel, oder gebe den gewünschten Code ein, um \nbereits gespielte Kapitel anzurechnen. Wähle die Kapitel durch Eingabe der \nZahl des Kapitels. Im Zweifelsfall geht es immer mit Enter weiter. Sammele \nPunkte und Erfolge. Viel Spaß!");
+      Console.WriteLine("Wähle dort das gewünschte Kapitel, oder gebe den gewünschten Code ein, um \nbereits gespielte Kapitel anzurechnen. Wähle die Kapitel durch Eingabe der \nZahl des Kapitels. Im Zweifelsfall geht es immer mit Enter weiter. Sammele \nPunkte und Erfolge. Viel Spaß! Punkte sammelt man Hauptsächlich durch \nMinispiele und den Beginn der Story des Hauptspiels. Im Hauptspiel zählen \nandere Werte, wie Gold und Erfahrung.");
       Console.WriteLine("________________________________________________________________________________");
       Console.ReadLine();
 
@@ -989,10 +1056,99 @@ namespace Ikanustik {
     #region Kampfspiel
 
     public static void GameWOOD(Player player, bool gam3) {
-      Menus.Bar();
-      Console.WriteLine("Willkommen im tiefen Wald des wilden Gelsenkirchen. Du bewegst dich vorsichtig\ndurch's Unterholz...\nHier lauern Dämonen. Sinkt der Wert auf 0, stirbt der Kontrahent. Mit Gold \nkönnen mächtigere Waffen gekauft werden!");
-
+      bool HelgaMet = false;
       player.Score += 100;
+      Menus.Bar();
+      Console.WriteLine("Dann lass uns mal ernster werden. Eine Geschichte erzählen. Und sie ist \nbestimmt auch so passiert! Ich versetze dich in meine Lage. Na dann wollen \nwir doch mal sehen. Drücke Enter, um die Geschichte zu \"entern\" :P");
+      Console.ReadLine();
+      Console.Clear();
+      Menus.Bar();
+      Console.WriteLine("Willkommen im tiefen Dickicht des wilden Schwarzwaldes. Du bewegst dich \nvorsichtig durch's Unterholz...Man sagt, hier lauerten Dämonen. Doch was ist \ndas? Eine Person.\n");
+      Console.ReadLine();
+
+      Console.Clear();
+      Reinhart.IntroBlackwood(player);
+      WeaponStore.Store(player);
+
+      Entity enemyWood1 = new Stepmother();
+      enemyWood1.Clash(player);
+
+      Reinhart.BlackwoodStepmother(player);
+
+      Menus.BetweenFight(player, ref HelgaMet);
+      Entity enemyWood2 = new Rasselbock();
+      enemyWood2.Clash(player);
+
+      Menus.BetweenFight(player, ref HelgaMet);
+      Entity enemyWood3 = new Skelett();
+      enemyWood3.Clash(player);
+
+      Menus.BetweenFight(player, ref HelgaMet);
+      Entity enemyWood4 = new Untoter();
+      enemyWood4.Clash(player);
+
+      Menus.BetweenFight(player, ref HelgaMet);
+      Entity enemyWood5 = new Moorleiche();
+      enemyWood5.Clash(player);
+
+      Menus.BetweenFight(player, ref HelgaMet);
+      Entity enemyWood6 = new Ghul();
+      enemyWood6.Clash(player);
+
+      Menus.BetweenFight(player, ref HelgaMet);
+      Entity enemyWood7 = new Ekke_Nekkepenn();
+      enemyWood7.Clash(player);
+
+      HelgaMet = true;
+      Helga.BlackwoodHello(player);
+
+      Menus.BetweenFight(player, ref HelgaMet);
+      Helga.BlackwoodTrain1(player);
+      Entity enemyWood8 = new Riesenratte();
+      enemyWood8.Clash(player);
+
+      Menus.BetweenFight(player, ref HelgaMet);
+      Helga.BlackwoodTrain2(player);
+      Entity enemyWood9 = new Schleim_Imp();
+      enemyWood9.Clash(player);
+
+      Menus.BetweenFight(player, ref HelgaMet);
+      Helga.BlackwoodTrain3(player);
+      Entity enemyWood10 = new Empusa();
+      enemyWood10.Clash(player);
+
+      Menus.BetweenFight(player, ref HelgaMet);
+      Helga.BlackwoodTrain4(player);
+      Entity enemyWood11 = new Schattenmann();
+      enemyWood11.Clash(player);
+
+      Menus.BetweenFight(player, ref HelgaMet);
+      Reinhart.BlackwoodTrain5(player);
+      Entity enemyWood12 = new Nachtalb();
+      enemyWood12.Clash(player);
+
+      Menus.BetweenFight(player, ref HelgaMet);
+      Reinhart.BlackwoodTrain6(player);
+      Entity enemyWood13 = new Klushund();
+      enemyWood13.Clash(player);
+
+      Menus.BetweenFight(player, ref HelgaMet);
+      Helga.BlackwoodTrain7(player);
+      Entity enemyWood14 = new Lich();
+      enemyWood14.Clash(player);
+
+      Menus.BetweenFight(player, ref HelgaMet);
+      Helga.BlackwoodTrain8(player);
+      Entity enemyWood15 = new Lindwurm();
+      enemyWood15.Clash(player);
+
+      Menus.BetweenFight(player, ref HelgaMet);
+      Entity enemyWood16 = new Elwetritsch();
+      enemyWood16.Clash(player);
+
+      Menus.BetweenFight(player, ref HelgaMet);
+      Entity enemyWood17 = new Die_Moira();
+      enemyWood17.Clash(player);
     }
 
     #endregion Kampfspiel
