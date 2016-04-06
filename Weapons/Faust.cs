@@ -4,7 +4,7 @@
 
     public Faust() {
       Name = "Faust";
-      Class = "Pure Kraft";
+      Class = WeaponClass.Kraft;
       Durability = 1;
       Cost = 0;
       MinDamage = 1;

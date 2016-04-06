@@ -1,10 +1,18 @@
 ﻿using System;
+using System.Collections.Generic;
 using Ikanustik.Entities;
 using Ikanustik.Weapons;
 
 namespace Ikanustik {
 
   internal class WeaponStore {
+    private static readonly Dictionary<string, Weapon> _weapons = new Dictionary<string, Weapon>();
+
+    public static Dictionary<string, Weapon> Weapons {
+      get {
+        return _weapons;
+      }
+    }
 
     public static void Store(Player player) {
       Console.Clear();

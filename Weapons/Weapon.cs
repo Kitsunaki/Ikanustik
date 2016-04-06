@@ -3,7 +3,7 @@ using Ikanustik.Entities;
 
 namespace Ikanustik.Weapons {
 
-  internal abstract class Weapon {
+  internal abstract class Weapon : ICloneable {
     private static Random RND = new Random();
 
     public string Name { get; set; }
@@ -140,6 +140,15 @@ namespace Ikanustik.Weapons {
         System.Threading.Thread.Sleep(25);
       }
       Console.Clear();
+    }
+
+    protected static void AddWeaponToStore(Weapon weapon) {
+      if (!WeaponStore.Weapons.ContainsKey(weapon.Name))
+        WeaponStore.Weapons.Add(weapon.Name, weapon);
+    }
+
+    public object Clone() {
+      return this.MemberwiseClone();
     }
   }
 }
