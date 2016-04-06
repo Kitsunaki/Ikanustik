@@ -88,14 +88,14 @@ namespace Ikanustik {
       } else if (choose == 'p') {
         Console.Clear();
         Menus.Bar();
-        Console.WriteLine($"\t1) {Leichter_Bogen.Weapon_Name}\t\tKostet {Leichter_Bogen.Weapon_Cost} Gold\t\t{Leichter_Bogen.Min_Damage}-{Leichter_Bogen.Max_Damage} Schaden");
-        Console.WriteLine($"\t2) {Kleine_Armbrust.Weapon_Name}\t\tKostet {Kleine_Armbrust.Weapon_Cost} Gold\t\t{Kleine_Armbrust.Min_Damage}-{Kleine_Armbrust.Max_Damage} Schaden");
+        Console.WriteLine($"\t1) {LeichterBogen.Weapon_Name}\t\tKostet {LeichterBogen.Weapon_Cost} Gold\t\t{LeichterBogen.Min_Damage}-{LeichterBogen.Max_Damage} Schaden");
+        Console.WriteLine($"\t2) {KleineArmbrust.Weapon_Name}\t\tKostet {KleineArmbrust.Weapon_Cost} Gold\t\t{KleineArmbrust.Min_Damage}-{KleineArmbrust.Max_Damage} Schaden");
         Console.WriteLine($"\t3) {Kompositbogen.Weapon_Name}\t\tKostet {Kompositbogen.Weapon_Cost} Gold\t\t{Kompositbogen.Min_Damage}-{Kompositbogen.Max_Damage} Schaden");
-        Console.WriteLine($"\t4) {Englischer_Langbogen.Weapon_Name}\t\tKostet {Englischer_Langbogen.Weapon_Cost} Gold\t\t{Englischer_Langbogen.Min_Damage}-{Englischer_Langbogen.Max_Damage} Schaden");
+        Console.WriteLine($"\t4) {EnglischerLangbogen.Weapon_Name}\t\tKostet {EnglischerLangbogen.Weapon_Cost} Gold\t\t{EnglischerLangbogen.Min_Damage}-{EnglischerLangbogen.Max_Damage} Schaden");
         Console.WriteLine($"\t5) {Kriegsbogen.Weapon_Name}\t\tKostet {Kriegsbogen.Weapon_Cost} Gold\t\t{Kriegsbogen.Min_Damage}-{Kriegsbogen.Max_Damage} Schaden");
-        Console.WriteLine($"\t6) {Überschwere_Armbrust.Weapon_Name}\t\tKostet {Überschwere_Armbrust.Weapon_Cost} Gold\t\t{Überschwere_Armbrust.Min_Damage}-{Überschwere_Armbrust.Max_Damage} Schaden");
+        Console.WriteLine($"\t6) {ÜberschwereArmbrust.Weapon_Name}\t\tKostet {ÜberschwereArmbrust.Weapon_Cost} Gold\t\t{ÜberschwereArmbrust.Min_Damage}-{ÜberschwereArmbrust.Max_Damage} Schaden");
         Console.WriteLine($"\t7) {Balliste.Weapon_Name}\tKostet {Balliste.Weapon_Cost} Gold\t{Balliste.Min_Damage}-{Balliste.Max_Damage} Schaden");
-        Console.WriteLine($"\t8) {Silber_Baliste.Weapon_Name}\t\tKostet {Silber_Baliste.Weapon_Cost} Gold\t\t{Silber_Baliste.Min_Damage}-{Silber_Baliste.Max_Damage} Schaden");
+        Console.WriteLine($"\t8) {SilberBaliste.Weapon_Name}\t\tKostet {SilberBaliste.Weapon_Cost} Gold\t\t{SilberBaliste.Min_Damage}-{SilberBaliste.Max_Damage} Schaden");
         Console.WriteLine($"\t9) {Walkürendonner.Weapon_Name}\t\tKostet {Walkürendonner.Weapon_Cost} Gold\t\t{Walkürendonner.Min_Damage}-{Walkürendonner.Max_Damage} Schaden");
         Console.WriteLine($"\n\t0) Keine Auswahl treffen...");
         Console.Write("\nWahl: ");
@@ -375,11 +375,11 @@ namespace Ikanustik {
       int weapon = int.Parse(Console.ReadLine());
       switch (weapon) {
         case 1:
-          hand = new Leichter_Bogen();
+          hand = new LeichterBogen();
           break;
 
         case 2:
-          hand = new Kleine_Armbrust();
+          hand = new KleineArmbrust();
           break;
 
         case 3:
@@ -387,7 +387,7 @@ namespace Ikanustik {
           break;
 
         case 4:
-          hand = new Englischer_Langbogen();
+          hand = new EnglischerLangbogen();
           break;
 
         case 5:
@@ -395,7 +395,7 @@ namespace Ikanustik {
           break;
 
         case 6:
-          hand = new Überschwere_Armbrust();
+          hand = new ÜberschwereArmbrust();
           break;
 
         case 7:
@@ -403,7 +403,7 @@ namespace Ikanustik {
           break;
 
         case 8:
-          hand = new Silber_Baliste();
+          hand = new SilberBaliste();
           break;
 
         case 9:

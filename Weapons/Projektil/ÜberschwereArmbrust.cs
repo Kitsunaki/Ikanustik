@@ -1,8 +1,8 @@
 ﻿namespace Ikanustik.Weapons {
 
-  internal class Überschwere_Armbrust : Weapon {
+  internal class ÜberschwereArmbrust : Weapon {
 
-    public Überschwere_Armbrust() {
+    public ÜberschwereArmbrust() {
       Name = "Überschwere Armbrust";
       Class = WeaponClass.Projektil;
       Durability = 185;

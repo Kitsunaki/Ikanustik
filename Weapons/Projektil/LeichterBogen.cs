@@ -1,8 +1,8 @@
 ﻿namespace Ikanustik.Weapons {
 
-  internal class Leichter_Bogen : Weapon {
+  internal class LeichterBogen : Weapon {
 
-    public Leichter_Bogen() {
+    public LeichterBogen() {
       Name = "Leichter Bogen";
       Class = WeaponClass.Projektil;
       Durability = 30;

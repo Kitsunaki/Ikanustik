@@ -1,8 +1,8 @@
 ﻿namespace Ikanustik.Weapons {
 
-  internal class Kleine_Armbrust : Weapon {
+  internal class KleineArmbrust : Weapon {
 
-    public Kleine_Armbrust() {
+    public KleineArmbrust() {
       Name = "Kleine Armbrust";
       Class = WeaponClass.Projektil;
       Durability = 50;

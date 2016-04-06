@@ -1,8 +1,8 @@
 ﻿namespace Ikanustik.Weapons {
 
-  internal class Silber_Baliste : Weapon {
+  internal class SilberBaliste : Weapon {
 
-    public Silber_Baliste() {
+    public SilberBaliste() {
       Name = "Silber-Balliste";
       Class = WeaponClass.Projektil;
       Durability = 280;
