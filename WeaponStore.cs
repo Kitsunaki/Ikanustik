@@ -102,7 +102,7 @@ namespace Ikanustik {
       Console.WriteLine("\nWähle eine Waffe:\n");
       for (int i = 0; i < weapons.Count; i++) {
         Waffe w = weapons[i];
-        Console.WriteLine($"\t{i}) {w.Name}\t\tKostet {w.Cost} Gold\t\t{w.MinDamage}-{w.MaxDamage} Schaden");
+        Console.WriteLine($"\t{i + 1}) {w.Name}\t\tKostet {w.Cost} Gold\t\t{w.MinDamage}-{w.MaxDamage} Schaden");
       }
       Console.WriteLine($"\n\t0) Keine Auswahl treffen...");
       Console.Write("\nWahl: ");
