@@ -1,5 +1,6 @@
 ﻿using System;
 using Ikanustik.Entities;
+using Ikanustik.Entities.NPC;
 
 namespace Ikanustik {
 

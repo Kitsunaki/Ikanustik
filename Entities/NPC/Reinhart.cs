@@ -1,8 +1,8 @@
 ﻿using System;
 
-namespace Ikanustik.Entities {
+namespace Ikanustik.Entities.NPC {
 
-  internal class Reinhart : Entity {
+  internal class Reinhart : NPC {
 
     public Reinhart() {
       Health = 100;

@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using Ikanustik.Entities;
+using Ikanustik.Entities.NPC;
 using Ikanustik.Weapons;
 using Ikanustik.Weapons.Axt;
 using Ikanustik.Weapons.Flegel;

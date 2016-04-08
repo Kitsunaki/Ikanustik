@@ -2,6 +2,7 @@
 using System.Linq;
 using Ikanustik.Entities;
 using Ikanustik.Entities._01Schwarzwald;
+using Ikanustik.Entities.NPC;
 
 namespace Ikanustik {
 

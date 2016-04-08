@@ -79,10 +79,11 @@
     <Compile Include="Entities\01Schwarzwald\Riesenratte.cs" />
     <Compile Include="Entities\01Schwarzwald\Schattenmann.cs" />
     <Compile Include="Entities\01Schwarzwald\Schleim-Imp.cs" />
-    <Compile Include="Entities\Helga.cs" />
+    <Compile Include="Entities\NPC\Helga.cs" />
     <Compile Include="Entities\01Schwarzwald\Moorleiche.cs" />
+    <Compile Include="Entities\NPC\NPC.cs" />
     <Compile Include="Entities\Orobas.cs" />
-    <Compile Include="Entities\Reinhart.cs" />
+    <Compile Include="Entities\NPC\Reinhart.cs" />
     <Compile Include="Entities\01Schwarzwald\Skelett.cs" />
     <Compile Include="Entities\Stepmother.cs" />
     <Compile Include="Entities\01Schwarzwald\Untoter.cs" />

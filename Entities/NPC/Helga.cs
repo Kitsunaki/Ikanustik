@@ -1,9 +1,9 @@
 ﻿using System;
 using Ikanustik.Entities._01Schwarzwald;
 
-namespace Ikanustik.Entities {
+namespace Ikanustik.Entities.NPC {
 
-  internal class Helga {
+  internal class Helga : NPC {
 
     public static void Train() {
       Console.WriteLine("                     .-~~~~~~~~~-._       _.- ~~~~~~~~~-.");
@@ -192,6 +192,10 @@ namespace Ikanustik.Entities {
       Console.ReadLine();
       Console.WriteLine($"\n{player.Name}:\n\"Es gibt stärkere Drachen als Lindwürmer, aber ich werde diesen hier nicht\nunterschätzen. Ich bin gerade erst wieder im Geschäft...\"");
       Console.ReadLine();
+    }
+
+    public override void Clash(Player player) {
+      throw new NotImplementedException();
     }
   }
 }
