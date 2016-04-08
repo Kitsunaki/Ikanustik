@@ -107,6 +107,10 @@ namespace Ikanustik {
     /// <param name="player">Der Spieler der mit dem Shop interargiert</param>
     /// <param name="waffengattung">Waffengattung nach welcher gefiltert werden soll</param>
     private static void ShowWeapons(Player player, Waffengattungen waffengattung) {
+      /*
+       * Sucht in der Liste "Waffen" alle Waffen einer speziellen Waffengattung.
+       * Die Waffen werden im Anschluss nach ihrem Preis aufsteigend sortiert und in einer neuen Liste gespeichert.
+       */
       var waffen = (from waffe in Waffen
                     where waffe.Waffengattung == waffengattung
                     orderby waffe.Cost
