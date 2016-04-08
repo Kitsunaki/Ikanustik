@@ -4,7 +4,7 @@
 
     public KolossalesFlamberg() {
       Name = "Kolossales Flamberg";
-      Waffengattung = Waffengattung.Klingen;
+      Waffengattung = Waffengattungen.Klingen;
       Durability = 105;
       FullDurability = 105;
       Cost = 3500;

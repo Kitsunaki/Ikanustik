@@ -4,7 +4,7 @@
 
     public Dreizack() {
       Name = "Dreizack";
-      Waffengattung = Waffengattung.Stangen;
+      Waffengattung = Waffengattungen.Stangen;
       Durability = 30;
       FullDurability = 30;
       Cost = 520;

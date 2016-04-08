@@ -4,7 +4,7 @@
 
     public Doppelaxt() {
       Name = "Schwere Doppelaxt";
-      Waffengattung = Waffengattung.Axt;
+      Waffengattung = Waffengattungen.Axt;
       Durability = 60;
       FullDurability = 60;
       Cost = 1500;

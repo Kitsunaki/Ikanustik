@@ -4,7 +4,7 @@
 
     public Prunksichel() {
       Name = "Prunksichel";
-      Waffengattung = Waffengattung.Axt;
+      Waffengattung = Waffengattungen.Axt;
       Durability = 32;
       FullDurability = 32;
       Cost = 950;

@@ -4,7 +4,7 @@
 
     public SpießstabAusAntioch() {
       Name = "Spießstab aus Antioch";
-      Waffengattung = Waffengattung.Stangen | Waffengattung.Artefakt;
+      Waffengattung = Waffengattungen.Stangen | Waffengattungen.Artefakt;
       Durability = 85;
       FullDurability = 85;
       Cost = 4400;

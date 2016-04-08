@@ -4,7 +4,7 @@
 
     public Kriegsszepter() {
       Name = "Kriegsszepter";
-      Waffengattung = Waffengattung.Flegel;
+      Waffengattung = Waffengattungen.Flegel;
       Durability = 130;
       FullDurability = 130;
       Cost = 440;

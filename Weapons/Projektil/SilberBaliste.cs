@@ -4,7 +4,7 @@
 
     public SilberBaliste() {
       Name = "Silber-Balliste";
-      Waffengattung = Waffengattung.Projektil;
+      Waffengattung = Waffengattungen.Projektil;
       Durability = 280;
       FullDurability = 280;
       Cost = 2250;

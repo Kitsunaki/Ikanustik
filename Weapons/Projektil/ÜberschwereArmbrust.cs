@@ -4,7 +4,7 @@
 
     public ÜberschwereArmbrust() {
       Name = "Überschwere Armbrust";
-      Waffengattung = Waffengattung.Projektil;
+      Waffengattung = Waffengattungen.Projektil;
       Durability = 185;
       FullDurability = 185;
       Cost = 1250;

@@ -4,7 +4,7 @@
 
     public Breitschwert() {
       Name = "Breitschwert";
-      Waffengattung = Waffengattung.Klingen;
+      Waffengattung = Waffengattungen.Klingen;
       Durability = 55;
       FullDurability = 55;
       Cost = 400;

@@ -8,7 +8,7 @@ namespace Ikanustik.Weapons {
     private static Random RND = new Random();
 
     public string Name { get; protected set; }
-    public Waffengattung Waffengattung { get; protected set; }
+    public Waffengattungen Waffengattung { get; protected set; }
     public int Cost { get; set; }
     public int Durability { get; set; }
     public int FullDurability { get; set; }
@@ -35,7 +35,7 @@ namespace Ikanustik.Weapons {
         }
 
         int EnemyDUR = 0;
-        if (player.ActiveWeapon.Waffengattung != Waffengattung.Projektil) {
+        if (player.ActiveWeapon.Waffengattung != Waffengattungen.Projektil) {
           FullDamage = FullDamage * (100 - entity.Armor) / 100;
           EnemyDUR = entity.Armor;
         }

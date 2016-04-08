@@ -4,7 +4,7 @@
 
     public Höllenschmiedenhammer() {
       Name = "Höllenschmiedenhammer";
-      Waffengattung = Waffengattung.Flegel;
+      Waffengattung = Waffengattungen.Flegel;
       Durability = 195;
       FullDurability = 195;
       Cost = 1980;

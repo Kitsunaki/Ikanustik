@@ -4,7 +4,7 @@
 
     public LeichterBogen() {
       Name = "Leichter Bogen";
-      Waffengattung = Waffengattung.Projektil;
+      Waffengattung = Waffengattungen.Projektil;
       Durability = 30;
       FullDurability = 30;
       Cost = 25;

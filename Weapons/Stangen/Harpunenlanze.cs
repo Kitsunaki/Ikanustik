@@ -4,7 +4,7 @@
 
     public Harpunenlanze() {
       Name = "Harpunenlanze";
-      Waffengattung = Waffengattung.Stangen;
+      Waffengattung = Waffengattungen.Stangen;
       Durability = 75;
       FullDurability = 75;
       Cost = 2500;

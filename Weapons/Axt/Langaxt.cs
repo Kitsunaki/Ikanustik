@@ -4,7 +4,7 @@
 
     public Langaxt() {
       Name = "Langaxt";
-      Waffengattung = Waffengattung.Axt;
+      Waffengattung = Waffengattungen.Axt;
       Durability = 35;
       FullDurability = 35;
       Cost = 380;

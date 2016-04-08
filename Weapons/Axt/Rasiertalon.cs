@@ -4,7 +4,7 @@
 
     public Rasiertalon() {
       Name = "Rasierklingentalon";
-      Waffengattung = Waffengattung.Axt;
+      Waffengattung = Waffengattungen.Axt;
       Durability = 28;
       FullDurability = 28;
       Cost = 590;

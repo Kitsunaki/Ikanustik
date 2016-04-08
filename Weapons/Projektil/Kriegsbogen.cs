@@ -4,7 +4,7 @@
 
     public Kriegsbogen() {
       Name = "Kriegsbogen";
-      Waffengattung = Waffengattung.Projektil;
+      Waffengattung = Waffengattungen.Projektil;
       Durability = 130;
       FullDurability = 130;
       Cost = 790;

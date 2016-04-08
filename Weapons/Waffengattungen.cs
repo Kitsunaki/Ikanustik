@@ -1,7 +1,7 @@
 ﻿using System;
 
 [Flags]
-internal enum Waffengattung {
+internal enum Waffengattungen {
   Keine,
   Kraft,
   Axt,

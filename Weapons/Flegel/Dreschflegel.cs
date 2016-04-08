@@ -4,7 +4,7 @@
 
     public Dreschflegel() {
       Name = "Dreschflegel";
-      Waffengattung = Waffengattung.Flegel;
+      Waffengattung = Waffengattungen.Flegel;
       Durability = 35;
       Durability = 35;
       Cost = 75;

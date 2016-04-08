@@ -4,7 +4,7 @@
 
     public Claymore() {
       Name = "Claymore";
-      Waffengattung = Waffengattung.Klingen;
+      Waffengattung = Waffengattungen.Klingen;
       Durability = 83;
       FullDurability = 83;
       Cost = 900;

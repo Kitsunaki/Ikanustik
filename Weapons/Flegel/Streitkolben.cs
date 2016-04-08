@@ -4,7 +4,7 @@
 
     public Streitkolben() {
       Name = "Streitkolben";
-      Waffengattung = Waffengattung.Flegel;
+      Waffengattung = Waffengattungen.Flegel;
       Durability = 90;
       Durability = 90;
       Cost = 110;

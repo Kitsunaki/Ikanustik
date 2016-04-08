@@ -4,7 +4,7 @@
 
     public Kriegssense() {
       Name = "Kriegssense";
-      Waffengattung = Waffengattung.Stangen;
+      Waffengattung = Waffengattungen.Stangen;
       Durability = 68;
       FullDurability = 68;
       Cost = 2100;

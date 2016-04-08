@@ -4,7 +4,7 @@
 
     public BeidhändigerKriegshammer() {
       Name = "Beidhändiger Kriegshammer";
-      Waffengattung = Waffengattung.Flegel;
+      Waffengattung = Waffengattungen.Flegel;
       Durability = 180;
       FullDurability = 180;
       Cost = 1050;

@@ -4,7 +4,7 @@
 
     public Hellebarde() {
       Name = "Hellebarde";
-      Waffengattung = Waffengattung.Stangen;
+      Waffengattung = Waffengattungen.Stangen;
       Durability = 59;
       FullDurability = 59;
       Cost = 1320;

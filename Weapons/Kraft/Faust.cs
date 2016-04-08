@@ -4,7 +4,7 @@
 
     public Faust() {
       Name = "Faust";
-      Waffengattung = Waffengattung.Kraft;
+      Waffengattung = Waffengattungen.Kraft;
       Durability = 1;
       Cost = 0;
       MinDamage = 1;

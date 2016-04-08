@@ -4,7 +4,7 @@
 
     public Krummsäbel() {
       Name = "Krummsäbel";
-      Waffengattung = Waffengattung.Klingen;
+      Waffengattung = Waffengattungen.Klingen;
       Durability = 38;
       FullDurability = 38;
       Cost = 200;

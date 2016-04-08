@@ -4,7 +4,7 @@
 
     public KleineArmbrust() {
       Name = "Kleine Armbrust";
-      Waffengattung = Waffengattung.Projektil;
+      Waffengattung = Waffengattungen.Projektil;
       Durability = 50;
       FullDurability = 50;
       Cost = 120;

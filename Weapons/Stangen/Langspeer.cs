@@ -4,7 +4,7 @@
 
     public Langspeer() {
       Name = "Langspeer";
-      Waffengattung = Waffengattung.Stangen;
+      Waffengattung = Waffengattungen.Stangen;
       Durability = 17;
       FullDurability = 17;
       Cost = 350;

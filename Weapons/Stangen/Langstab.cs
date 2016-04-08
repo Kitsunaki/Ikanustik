@@ -4,7 +4,7 @@
 
     public Langstab() {
       Name = "Langstab";
-      Waffengattung = Waffengattung.Stangen;
+      Waffengattung = Waffengattungen.Stangen;
       Durability = 5;
       FullDurability = 5;
       Cost = 30;

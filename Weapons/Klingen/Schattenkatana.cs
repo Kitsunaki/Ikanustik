@@ -4,7 +4,7 @@
 
     public Schattenkatana() {
       Name = "Schattenstahlkatana";
-      Waffengattung = Waffengattung.Klingen | Waffengattung.Artefakt;
+      Waffengattung = Waffengattungen.Klingen | Waffengattungen.Artefakt;
       Durability = 108;
       FullDurability = 108;
       Cost = 7000;

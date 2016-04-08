@@ -4,7 +4,7 @@
 
     public Dolch() {
       Name = "Dolch";
-      Waffengattung = Waffengattung.Klingen;
+      Waffengattung = Waffengattungen.Klingen;
       Durability = 10;
       FullDurability = 10;
       Cost = 0;

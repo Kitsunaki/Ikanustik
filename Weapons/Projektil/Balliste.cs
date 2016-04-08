@@ -4,7 +4,7 @@
 
     public Balliste() {
       Name = "Balliste";
-      Waffengattung = Waffengattung.Projektil;
+      Waffengattung = Waffengattungen.Projektil;
       Durability = 250;
       FullDurability = 250;
       Cost = 1800;

@@ -4,7 +4,7 @@
 
     public Krismesser() {
       Name = "Krismesser";
-      Waffengattung = Waffengattung.Klingen;
+      Waffengattung = Waffengattungen.Klingen;
       Durability = 15;
       FullDurability = 15;
       Cost = 35;

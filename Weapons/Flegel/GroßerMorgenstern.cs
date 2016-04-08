@@ -4,7 +4,7 @@
 
     public GroßerMorgenstern() {
       Name = "Großer Morgenstern";
-      Waffengattung = Waffengattung.Flegel;
+      Waffengattung = Waffengattungen.Flegel;
       Durability = 115;
       Durability = 115;
       Cost = 280;

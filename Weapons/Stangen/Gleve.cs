@@ -4,7 +4,7 @@
 
     public Gleve() {
       Name = "Gleve";
-      Waffengattung = Waffengattung.Stangen;
+      Waffengattung = Waffengattungen.Stangen;
       Durability = 11;
       FullDurability = 11;
       Cost = 150;

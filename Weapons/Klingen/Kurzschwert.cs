@@ -4,7 +4,7 @@
 
     public Kurzschwert() {
       Name = "Kurzschwert";
-      Waffengattung = Waffengattung.Klingen;
+      Waffengattung = Waffengattungen.Klingen;
       Durability = 25;
       FullDurability = 25;
       Cost = 80;

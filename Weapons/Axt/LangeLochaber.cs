@@ -4,7 +4,7 @@
 
     public LangeLochaber() {
       Name = "Lange Lochaber";
-      Waffengattung = Waffengattung.Axt;
+      Waffengattung = Waffengattungen.Axt;
       Durability = 68;
       FullDurability = 68;
       Cost = 3000;

@@ -4,7 +4,7 @@
 
     public DerWolkenbrecher() {
       Name = "Der Wolkenbrecher";
-      Waffengattung = Waffengattung.Axt | Waffengattung.Artefakt;
+      Waffengattung = Waffengattungen.Axt | Waffengattungen.Artefakt;
       Durability = 80;
       FullDurability = 80;
       Cost = 6200;

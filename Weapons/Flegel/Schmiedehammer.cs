@@ -4,7 +4,7 @@
 
     public Schmiedehammer() {
       Name = "Schmiedehammer";
-      Waffengattung = Waffengattung.Flegel;
+      Waffengattung = Waffengattungen.Flegel;
       Durability = 60;
       FullDurability = 60;
       Cost = 35;

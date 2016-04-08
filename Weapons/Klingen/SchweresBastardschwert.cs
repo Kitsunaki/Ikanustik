@@ -4,7 +4,7 @@
 
     public SchweresBastardschwert() {
       Name = "Schweres Bastardschwert";
-      Waffengattung = Waffengattung.Klingen;
+      Waffengattung = Waffengattungen.Klingen;
       Durability = 98;
       FullDurability = 98;
       Cost = 1600;

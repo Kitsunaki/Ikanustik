@@ -4,7 +4,7 @@
 
     public Spaltaxt() {
       Name = "Spaltaxt";
-      Waffengattung = Waffengattung.Axt;
+      Waffengattung = Waffengattungen.Axt;
       Durability = 25;
       FullDurability = 25;
       Cost = 180;

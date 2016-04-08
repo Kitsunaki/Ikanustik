@@ -106,7 +106,7 @@ namespace Ikanustik {
     /// </summary>
     /// <param name="player">Der Spieler der mit dem Shop interargiert</param>
     /// <param name="waffengattung">Waffengattung nach welcher gefiltert werden soll</param>
-    private static void ShowWeapons(Player player, Waffengattung waffengattung) {
+    private static void ShowWeapons(Player player, Waffengattungen waffengattung) {
       var waffen = (from waffe in Waffen
                     where waffe.Waffengattung == waffengattung
                     orderby waffe.Cost
@@ -163,15 +163,15 @@ namespace Ikanustik {
 
       char choose = Console.ReadKey(true).KeyChar;
       if (choose == 'k') {
-        ShowWeapons(player, Waffengattung.Klingen);
+        ShowWeapons(player, Waffengattungen.Klingen);
       } else if (choose == 'f') {
-        ShowWeapons(player, Waffengattung.Flegel);
+        ShowWeapons(player, Waffengattungen.Flegel);
       } else if (choose == 's') {
-        ShowWeapons(player, Waffengattung.Stangen);
+        ShowWeapons(player, Waffengattungen.Stangen);
       } else if (choose == 'a') {
-        ShowWeapons(player, Waffengattung.Axt);
+        ShowWeapons(player, Waffengattungen.Axt);
       } else if (choose == 'p') {
-        ShowWeapons(player, Waffengattung.Projektil);
+        ShowWeapons(player, Waffengattungen.Projektil);
       } else if (choose == 'e') {
         Console.WriteLine("\nKeine Auswahl getroffen.");
         System.Threading.Thread.Sleep(2000);

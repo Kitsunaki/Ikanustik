@@ -4,7 +4,7 @@
 
     public Kompositbogen() {
       Name = "Kompositbogen";
-      Waffengattung = Waffengattung.Projektil;
+      Waffengattung = Waffengattungen.Projektil;
       Durability = 60;
       FullDurability = 60;
       Cost = 300;

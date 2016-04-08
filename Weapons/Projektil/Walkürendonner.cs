@@ -4,7 +4,7 @@
 
     public Walkürendonner() {
       Name = "Walkürendonner";
-      Waffengattung = Waffengattung.Projektil | Waffengattung.Artefakt;
+      Waffengattung = Waffengattungen.Projektil | Waffengattungen.Artefakt;
       Durability = 350;
       FullDurability = 350;
       Cost = 4000;

@@ -4,7 +4,7 @@
 
     public Archonsäule() {
       Name = "Archonsäule";
-      Waffengattung = Waffengattung.Flegel | Waffengattung.Artefakt;
+      Waffengattung = Waffengattungen.Flegel | Waffengattungen.Artefakt;
       Durability = 280;
       FullDurability = 280;
       Cost = 4420;

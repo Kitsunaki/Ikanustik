@@ -4,7 +4,7 @@
 
     public StygischerPrunkknüttel() {
       Name = "Stygischer Prunkknüttel";
-      Waffengattung = Waffengattung.Flegel;
+      Waffengattung = Waffengattungen.Flegel;
       Durability = 220;
       FullDurability = 220;
       Cost = 2520;

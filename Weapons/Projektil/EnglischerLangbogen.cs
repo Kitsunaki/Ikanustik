@@ -4,7 +4,7 @@
 
     public EnglischerLangbogen() {
       Name = "Englischer Langbogen";
-      Waffengattung = Waffengattung.Projektil;
+      Waffengattung = Waffengattungen.Projektil;
       Durability = 90;
       FullDurability = 90;
       Cost = 520;

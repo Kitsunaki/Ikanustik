@@ -4,7 +4,7 @@
 
     public Bardike() {
       Name = "Bardike";
-      Waffengattung = Waffengattung.Stangen;
+      Waffengattung = Waffengattungen.Stangen;
       Durability = 45;
       FullDurability = 45;
       Cost = 800;
