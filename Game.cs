@@ -1076,78 +1076,78 @@ namespace Ikanustik {
 
       Reinhart.BlackwoodStepmother(player);
 
-      Menus.BetweenFight(player, ref HelgaMet);
+      Menus.BetweenFight(player, HelgaMet);
       Entity enemyWood2 = new Rasselbock();
       enemyWood2.Clash(player);
 
-      Menus.BetweenFight(player, ref HelgaMet);
+      Menus.BetweenFight(player, HelgaMet);
       Entity enemyWood3 = new Skelett();
       enemyWood3.Clash(player);
 
-      Menus.BetweenFight(player, ref HelgaMet);
+      Menus.BetweenFight(player, HelgaMet);
       Entity enemyWood4 = new Untoter();
       enemyWood4.Clash(player);
 
-      Menus.BetweenFight(player, ref HelgaMet);
+      Menus.BetweenFight(player, HelgaMet);
       Entity enemyWood5 = new Moorleiche();
       enemyWood5.Clash(player);
 
-      Menus.BetweenFight(player, ref HelgaMet);
+      Menus.BetweenFight(player, HelgaMet);
       Entity enemyWood6 = new Ghul();
       enemyWood6.Clash(player);
 
-      Menus.BetweenFight(player, ref HelgaMet);
+      Menus.BetweenFight(player, HelgaMet);
       Entity enemyWood7 = new Ekke_Nekkepenn();
       enemyWood7.Clash(player);
 
       HelgaMet = true;
       Helga.BlackwoodHello(player);
 
-      Menus.BetweenFight(player, ref HelgaMet);
+      Menus.BetweenFight(player, HelgaMet);
       Helga.BlackwoodTrain1(player);
       Entity enemyWood8 = new Riesenratte();
       enemyWood8.Clash(player);
 
-      Menus.BetweenFight(player, ref HelgaMet);
+      Menus.BetweenFight(player, HelgaMet);
       Helga.BlackwoodTrain2(player);
       Entity enemyWood9 = new Schleim_Imp();
       enemyWood9.Clash(player);
 
-      Menus.BetweenFight(player, ref HelgaMet);
+      Menus.BetweenFight(player, HelgaMet);
       Helga.BlackwoodTrain3(player);
       Entity enemyWood10 = new Empusa();
       enemyWood10.Clash(player);
 
-      Menus.BetweenFight(player, ref HelgaMet);
+      Menus.BetweenFight(player, HelgaMet);
       Helga.BlackwoodTrain4(player);
       Entity enemyWood11 = new Schattenmann();
       enemyWood11.Clash(player);
 
-      Menus.BetweenFight(player, ref HelgaMet);
+      Menus.BetweenFight(player, HelgaMet);
       Reinhart.BlackwoodTrain5(player);
       Entity enemyWood12 = new Nachtalb();
       enemyWood12.Clash(player);
 
-      Menus.BetweenFight(player, ref HelgaMet);
+      Menus.BetweenFight(player, HelgaMet);
       Reinhart.BlackwoodTrain6(player);
       Entity enemyWood13 = new Klushund();
       enemyWood13.Clash(player);
 
-      Menus.BetweenFight(player, ref HelgaMet);
+      Menus.BetweenFight(player, HelgaMet);
       Helga.BlackwoodTrain7(player);
       Entity enemyWood14 = new Lich();
       enemyWood14.Clash(player);
 
-      Menus.BetweenFight(player, ref HelgaMet);
+      Menus.BetweenFight(player, HelgaMet);
       Helga.BlackwoodTrain8(player);
       Entity enemyWood15 = new Lindwurm();
       enemyWood15.Clash(player);
 
-      Menus.BetweenFight(player, ref HelgaMet);
+      Menus.BetweenFight(player, HelgaMet);
       Entity enemyWood16 = new Elwetritsch();
       enemyWood16.Clash(player);
 
-      Menus.BetweenFight(player, ref HelgaMet);
+      Menus.BetweenFight(player, HelgaMet);
       Entity enemyWood17 = new Die_Moira();
       enemyWood17.Clash(player);
     }

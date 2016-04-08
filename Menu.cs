@@ -338,7 +338,7 @@ namespace Ikanustik {
       Environment.Exit(0);
     }
 
-    public static void BetweenFight(Player player, ref bool HelgaMet) {
+    public static void BetweenFight(Player player, bool HelgaMet) {
       bool ready = false;
 
       do {
