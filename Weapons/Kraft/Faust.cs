@@ -1,10 +1,10 @@
-﻿namespace Ikanustik.Weapons {
+﻿namespace Ikanustik.Weapons.Kraft {
 
   internal class Faust : Waffe {
 
     public Faust() {
       Name = "Faust";
-      Waffengattung = Waffengattung.Keine;
+      Waffengattung = Waffengattung.Kraft;
       Durability = 1;
       Cost = 0;
       MinDamage = 1;

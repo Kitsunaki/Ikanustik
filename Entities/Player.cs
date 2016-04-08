@@ -1,5 +1,6 @@
 ﻿using System;
 using Ikanustik.Weapons;
+using Ikanustik.Weapons.Kraft;
 
 namespace Ikanustik.Entities {
 

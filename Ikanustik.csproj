@@ -107,7 +107,7 @@
     <Compile Include="Weapons\Flegel\GroßerMorgenstern.cs" />
     <Compile Include="Weapons\Flegel\StygischerPrunkknüttel.cs" />
     <Compile Include="Weapons\Flegel\Archonsäule.cs" />
-    <Compile Include="Weapons\Faust.cs" />
+    <Compile Include="Weapons\Kraft\Faust.cs" />
     <Compile Include="Weapons\Klingen\Schattenkatana.cs" />
     <Compile Include="Weapons\Projektil\LeichterBogen.cs" />
     <Compile Include="Weapons\Projektil\KleineArmbrust.cs" />
