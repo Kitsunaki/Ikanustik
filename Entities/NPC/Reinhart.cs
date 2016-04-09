@@ -30,7 +30,7 @@ namespace Ikanustik.Entities.NPC {
     public static void Repair(Player player) {
       Console.Clear();
       Menus.Bar();
-      ReinhartPortrait();
+      Portrait();
       Console.Write($"\tReinhart:\n\"");
 
       int RepairCost = player.ActiveWeapon.MinDamage * (player.ActiveWeapon.FullDurability - player.ActiveWeapon.Durability);
@@ -67,7 +67,7 @@ namespace Ikanustik.Entities.NPC {
       Console.ReadLine();
       Console.Clear();
       Menus.Bar();
-      ReinhartPortrait();
+      Portrait();
       Console.Write($"\tReinhart:\n\"");
       Console.Write($"Tach {player.Name}, wat jeht? Ick muss dir wat sagen! Ick spüre die Energie \nvon deiner Stiefmutter inner Nähe. Schnell, kiek dich bei meinen Waffen um, \nbevor die Olle da ist! Dolche gibt es so uff die Kralle. Davon habe ick genug.");
       Console.Write($"\"");
@@ -77,7 +77,7 @@ namespace Ikanustik.Entities.NPC {
     public static void BlackwoodStepmother(Player player) {
       Console.Clear();
       Menus.Bar();
-      ReinhartPortrait();
+      Portrait();
       Console.Write($"\tReinhart:\n\"");
       Console.Write($"Hast du das anjekiekt? Es konnte sich net wehren! Dit war gar koin Lebewesen,\nnur ein lebloser Golem! Die Olle plant doch irjendwatt! Wir müssen dich \nvorbereiten. Du musst Helga finden. Sie kann disch Unterricht geben! Zwischen \njedem Kampf, kannste bei mir innekieken, ob du neue Waffen broochst. Ick giff \ndir mol 10 Gold uff die Kralle. Kannste beholten. Und nu viel Erfolg.");
       Console.Write($"\"");
@@ -88,14 +88,14 @@ namespace Ikanustik.Entities.NPC {
     public static void Map(Player player) {
       Console.Clear();
       Menus.Bar();
-      ReinhartPortrait();
+      Portrait();
       Console.Write($"\tReinhart:\n\"");
       Console.Write($"Willste mal in mein Angebot kieken? Sach ditte gleich!");
       Console.Write($"\"");
       Console.ReadLine();
     }
 
-    public static void ReinhartPortrait() {
+    public static void Portrait() {
       Console.Write("        .-'--.\n");
       Console.Write("      .'      '.\n");
       Console.Write("     /     _    `-.\n");
@@ -115,26 +115,6 @@ namespace Ikanustik.Entities.NPC {
       Console.Write("       \\    `   ``     /\n");
       Console.Write("        '-.__     // .'\n");
       Console.Write("             `'`.__.'\n");
-    }
-
-    public static void BlackwoodTrain5(Player player) {
-      Console.Clear();
-      Menus.Bar();
-      ReinhartPortrait();
-      Console.Write("Reinhart:\n\"");
-      Console.Write("Bevor Helga sisch hier mit deinem Training ganz meschugge macht, will icke\nooch noch wat beitrajen! Ick werde dir wat über Waffen vertellen. Du koofst\n'se bei mir für Jold und jegen 'nen Preis für meene Werkzeuge, kann ick\nWaffen sojar wieder zusammenflicken. Die Räpperatur wird teurer, je höher der\nMinimoolschooden der Waffe is' und je stärker du die Waffe schon\nverklöppelt has'. Rischig lohnen, tut sich das Einsetzen meener Werkzeuje also\nerst bei fetteren Waffen. Du konnscht den Gegnern eenen aufn Döötz hauen, mit\neenem zufälligen Wert zwischen dem minioolen und maximoolen Schaden deiner\nWaffe. Das hängt janz davon ab, wie juut deen Schwung so ausfällt. Kann vorher\nniemand versischern. Außerdem besteht eine 50% Schanse, dass deene Waffe beem\nKloppen ein Haltbarkeit verliern tut. Is' der Wert bei null, is' die Waffe\nim Oarsch und du kanns' nur noch mit 'de Mäusefäustschen kloppen. Das is'\nnisch zu empfehlen. Also achte im kommenden Kampf off deene Waffe, den\nSchooden und die Haltbarkeit. Und denke dran, dass deen Gegner dir och Schaden\nrinne kloppet!");
-      Console.Write("\"");
-      Console.ReadLine();
-    }
-
-    public static void BlackwoodTrain6(Player player) {
-      Console.Clear();
-      Menus.Bar();
-      ReinhartPortrait();
-      Console.Write("Reinhart:\n\"");
-      Console.Write("Wat' ick dir noch sajen kann, is' dat es eene Waffenklasse gibt. Die is'\nnisch so wischtich, aber ich sortiere meene Woffen nach Klinge, Flegel,\nStange, Oxt und Projektil. Die haben olle ihre Vorzüsche. Klingen sind\nausjewogen, Flegel halten viel uss, Stangen haben 'ne fette Reichwoite im\nSchaden, Äxte mochen dicke Löcher in die Geechner rin, und Projektilwaffen\nsind toll jegen Rüstungen der Geechner. Denn sie brechen durch olles duarsch.\nDann jibbet es noch Artefakte, das sind die fettesten Oschis unter jeder\n einzelnen Waffenklasse. Goiler Scheiß, wa?");
-      Console.Write("\"");
-      Console.ReadLine();
     }
   }
 }

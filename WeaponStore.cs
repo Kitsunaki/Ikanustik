@@ -165,7 +165,7 @@ namespace Ikanustik {
     public static void Store(Player player) {
       Console.Clear();
       Menus.Bar();
-      Reinhart.ReinhartPortrait();
+      Reinhart.Portrait();
       Console.Write($"Reinhart: \n\"Der aktuelle Schaden von {player.ActiveWeapon.Name} beträgt {player.ActiveWeapon.MinDamage}-{player.ActiveWeapon.MaxDamage} Schadenspunkte.");
       Console.WriteLine($"\nDu hast momentan {player.Gold} Gold bei dir. Was möchtest du dir anschauen?\"\n\n\tk) Klingenwaffen\n\tf) Flegelwaffen\n\ts) Stangenwaffen\n\ta) Axtwaffen\n\tp) Projektilwaffen\n");
       Console.WriteLine($"\tr) {player.ActiveWeapon.Name} reparieren\n\n\te) Nichts kaufen");

@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections.Generic;
 using System.Linq;
 using Ikanustik.Entities;
 using Ikanustik.Entities._01Schwarzwald;
@@ -1056,9 +1057,36 @@ namespace Ikanustik {
 
     #region Kampfspiel
 
+    /// <summary>
+    /// Gibt eine Liste von Monstern zurück.
+    /// </summary>
+    /// <returns></returns>
+    private static IEnumerable<Entity> GetMonstersBlackwood() {
+      yield return new Stepmother();        // 0
+      yield return new Rasselbock();        // 1
+      yield return new Skelett();           // 2
+      yield return new Untoter();           // 3
+      yield return new Moorleiche();        // 4
+      yield return new Ghul();              // 5
+      yield return new Ekke_Nekkepenn();    // 6
+      yield return new Riesenratte();       // 7
+      yield return new Schleim_Imp();       // 8
+      yield return new Empusa();            // 9
+      yield return new Schattenmann();      // 10
+      yield return new Nachtalb();          // 11
+      yield return new Klushund();          // 12
+      yield return new Lich();              // 13
+      yield return new Lindwurm();          // 14
+      yield return new Elwetritsch();       // 15
+      yield return new Die_Moira();         // 16
+    }
+
     public static void GameWOOD(Player player, bool gam3) {
+      IList<Entity> enemys = GetMonstersBlackwood().ToList();
+      int blackwoodTrain = 1;
       bool HelgaMet = false;
       player.Score += 100;
+
       Menus.Bar();
       Console.WriteLine("Dann lass uns mal ernster werden. Eine Geschichte erzählen. Und sie ist \nbestimmt auch so passiert! Ich versetze dich in meine Lage. Na dann wollen \nwir doch mal sehen. Drücke Enter, um die Geschichte zu \"entern\" :P");
       Console.ReadLine();
@@ -1071,85 +1099,36 @@ namespace Ikanustik {
       Reinhart.IntroBlackwood(player);
       WeaponStore.Store(player);
 
-      Entity enemyWood1 = new Stepmother();
-      enemyWood1.Clash(player);
+      for (int i = 0; i < enemys.Count; i++) {
+        switch (i) {
+          case 0:
+            // Erster Kampf, hier muss der Clash einmalig aufgerufen um die Logik zu erhalten.
+            enemys[i].Clash(player);
+            Reinhart.BlackwoodStepmother(player);
+            break;
 
-      Reinhart.BlackwoodStepmother(player);
+          case 7:
+            //In den Kämpfen nach Ekke Nekkepenn taucht Helga auf
+            HelgaMet = true;
+            Helga.BlackwoodHello(player);
+            goto case 8;
+          case 8:
+          case 9:
+          case 10:
+          case 13:
+          case 14:
+            Helga.BlackwoodTrain(player, blackwoodTrain++, Helga.Portrait);
+            break;
 
-      Menus.BetweenFight(player, HelgaMet);
-      Entity enemyWood2 = new Rasselbock();
-      enemyWood2.Clash(player);
+          case 11:
+          case 12:
+            Reinhart.BlackwoodTrain(player, blackwoodTrain++, Reinhart.Portrait);
+            break;
+        }
 
-      Menus.BetweenFight(player, HelgaMet);
-      Entity enemyWood3 = new Skelett();
-      enemyWood3.Clash(player);
-
-      Menus.BetweenFight(player, HelgaMet);
-      Entity enemyWood4 = new Untoter();
-      enemyWood4.Clash(player);
-
-      Menus.BetweenFight(player, HelgaMet);
-      Entity enemyWood5 = new Moorleiche();
-      enemyWood5.Clash(player);
-
-      Menus.BetweenFight(player, HelgaMet);
-      Entity enemyWood6 = new Ghul();
-      enemyWood6.Clash(player);
-
-      Menus.BetweenFight(player, HelgaMet);
-      Entity enemyWood7 = new Ekke_Nekkepenn();
-      enemyWood7.Clash(player);
-
-      HelgaMet = true;
-      Helga.BlackwoodHello(player);
-
-      Menus.BetweenFight(player, HelgaMet);
-      Helga.BlackwoodTrain1(player);
-      Entity enemyWood8 = new Riesenratte();
-      enemyWood8.Clash(player);
-
-      Menus.BetweenFight(player, HelgaMet);
-      Helga.BlackwoodTrain2(player);
-      Entity enemyWood9 = new Schleim_Imp();
-      enemyWood9.Clash(player);
-
-      Menus.BetweenFight(player, HelgaMet);
-      Helga.BlackwoodTrain3(player);
-      Entity enemyWood10 = new Empusa();
-      enemyWood10.Clash(player);
-
-      Menus.BetweenFight(player, HelgaMet);
-      Helga.BlackwoodTrain4(player);
-      Entity enemyWood11 = new Schattenmann();
-      enemyWood11.Clash(player);
-
-      Menus.BetweenFight(player, HelgaMet);
-      Reinhart.BlackwoodTrain5(player);
-      Entity enemyWood12 = new Nachtalb();
-      enemyWood12.Clash(player);
-
-      Menus.BetweenFight(player, HelgaMet);
-      Reinhart.BlackwoodTrain6(player);
-      Entity enemyWood13 = new Klushund();
-      enemyWood13.Clash(player);
-
-      Menus.BetweenFight(player, HelgaMet);
-      Helga.BlackwoodTrain7(player);
-      Entity enemyWood14 = new Lich();
-      enemyWood14.Clash(player);
-
-      Menus.BetweenFight(player, HelgaMet);
-      Helga.BlackwoodTrain8(player);
-      Entity enemyWood15 = new Lindwurm();
-      enemyWood15.Clash(player);
-
-      Menus.BetweenFight(player, HelgaMet);
-      Entity enemyWood16 = new Elwetritsch();
-      enemyWood16.Clash(player);
-
-      Menus.BetweenFight(player, HelgaMet);
-      Entity enemyWood17 = new Die_Moira();
-      enemyWood17.Clash(player);
+        Menus.BetweenFight(player, HelgaMet);
+        enemys[i].Clash(player);
+      }
     }
 
     #endregion Kampfspiel
