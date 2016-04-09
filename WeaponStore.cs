@@ -129,27 +129,28 @@ namespace Ikanustik {
     }
 
     private static void ChooseWeapon(Player player, IList<Waffe> waffen) {
-      int weapon = int.Parse(Console.ReadLine());
-
-      if (weapon == 0) {
+      /*
+       * Dieser Delegat ersetzt die Codewiederholung zum anzeigen der Message
+       */
+      Action<string, int> printMessage = (message, timeToWait) => {
         Console.Clear();
         Console.Write(new string('\n', 10));
-        Console.WriteLine($"\t\t\tDu behälst {player.ActiveWeapon.Name} als aktive Waffe!");
+        Console.WriteLine(message);
         System.Threading.Thread.Sleep(2000);
-      } else if (weapon > 0 && weapon <= waffen.Count) {
-        Waffe hand = (Waffe)waffen[weapon - 1].Clone();
+      };
+
+      int choose = int.Parse(Console.ReadLine());
+
+      if (choose == 0) {
+        printMessage($"\t\t\tDu behälst {player.ActiveWeapon.Name} als aktive Waffe!", 2000);
+      } else if (choose > 0 && choose <= waffen.Count) {
+        Waffe hand = (Waffe)waffen[choose - 1].Clone();
         if (player.Gold >= hand.Cost) {
           player.ActiveWeapon = hand;
           player.Gold -= hand.Cost;
-          Console.Clear();
-          Console.Write(new String('\n', 10));
-          Console.WriteLine($"\t\t\t{player.ActiveWeapon.Name} wurde ausgewählt!");
-          System.Threading.Thread.Sleep(2500);
+          printMessage($"\t\t\t{player.ActiveWeapon.Name} wurde ausgewählt!", 2500);
         } else {
-          Console.Clear();
-          Console.Write(new String('\n', 10));
-          Console.WriteLine("Dafür reicht dein Vermögen leider nicht aus!");
-          System.Threading.Thread.Sleep(2000);
+          printMessage("Dafür reicht dein Vermögen leider nicht aus!", 2000);
         }
       } else {
         Console.WriteLine("\nKeine Waffe ausgewählt!");
