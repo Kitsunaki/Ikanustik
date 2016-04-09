@@ -128,6 +128,11 @@ namespace Ikanustik {
       ChooseWeapon(player, waffen);
     }
 
+    /// <summary>
+    /// Wählt aus einer Liste von Waffen eine aus und fügt sie ggf. dem Spieler hinzu.
+    /// </summary>
+    /// <param name="player">Der Spieler</param>
+    /// <param name="waffen">Liste mit Waffen</param>
     private static void ChooseWeapon(Player player, IList<Waffe> waffen) {
       /*
        * Dieser Delegat ersetzt die Codewiederholung zum anzeigen der Message
