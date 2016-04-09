@@ -1062,23 +1062,27 @@ namespace Ikanustik {
     /// </summary>
     /// <returns></returns>
     private static IEnumerable<Entity> GetMonstersBlackwood() {
-      yield return new Stepmother();        // 0
-      yield return new Rasselbock();        // 1
-      yield return new Skelett();           // 2
-      yield return new Untoter();           // 3
-      yield return new Moorleiche();        // 4
-      yield return new Ghul();              // 5
-      yield return new Ekke_Nekkepenn();    // 6
-      yield return new Riesenratte();       // 7
-      yield return new Schleim_Imp();       // 8
-      yield return new Empusa();            // 9
-      yield return new Schattenmann();      // 10
-      yield return new Nachtalb();          // 11
-      yield return new Klushund();          // 12
-      yield return new Lich();              // 13
-      yield return new Lindwurm();          // 14
-      yield return new Elwetritsch();       // 15
-      yield return new Die_Moira();         // 16
+      foreach (var enemy in new Entity[] {
+      new Stepmother(),       // 0
+      new Rasselbock(),       // 1
+      new Skelett(),          // 2
+      new Untoter(),          // 3
+      new Moorleiche(),       // 4
+      new Ghul(),             // 5
+      new Ekke_Nekkepenn(),   // 6
+      new Riesenratte(),      // 7
+      new Schleim_Imp(),      // 8
+      new Empusa(),           // 9
+      new Schattenmann(),     // 10
+      new Nachtalb(),         // 11
+      new Klushund(),         // 12
+      new Lich(),             // 13
+      new Lindwurm(),         // 14
+      new Elwetritsch(),      // 15
+      new Die_Moira()         // 16
+    }) {
+        yield return enemy;
+      }
     }
 
     public static void GameWOOD(Player player, bool gam3) {
@@ -1105,7 +1109,7 @@ namespace Ikanustik {
             // Erster Kampf, hier muss der Clash einmalig aufgerufen um die Logik zu erhalten.
             enemys[i].Clash(player);
             Reinhart.BlackwoodStepmother(player);
-            break;
+            continue;
 
           case 7:
             //In den Kämpfen nach Ekke Nekkepenn taucht Helga auf
