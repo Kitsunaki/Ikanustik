@@ -345,18 +345,19 @@ namespace Ikanustik {
         Console.Clear();
         Menus.Bar();
         Console.WriteLine($"Spieler: {player.Name}\n\n\tGold: {player.Gold}\tErfahrung: {player.Skill}\tAusgerüstet: {player.ActiveWeapon.Name} ({player.ActiveWeapon.Durability}/{player.ActiveWeapon.FullDurability})\n");
-        if (HelgaMet == false) {
+        if (!HelgaMet) {
           Console.WriteLine($"\n\t1) Mit Reinhart sprechen");
           Console.WriteLine($"\t2) Gehe weiter!");
           Console.Write("Wahl: ");
           char mapwahl = Console.ReadKey().KeyChar;
+
           if (mapwahl == '1') {
             Reinhart.Map(player);
             WeaponStore.Store(player);
           } else if (mapwahl == '2') {
             ready = true;
           }
-        } else if (HelgaMet == true) {
+        } else {
           Console.WriteLine($"\n\t1) Mit Reinhart sprechen");
           Console.WriteLine($"\t2) Mit Helga sprechen");
           Console.WriteLine($"\t3) Gehe weiter!");
@@ -371,7 +372,7 @@ namespace Ikanustik {
             ready = true;
           }
         }
-      } while (ready == false);
+      } while (!ready);
     }
   }
 }
