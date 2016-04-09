@@ -91,7 +91,7 @@ namespace Ikanustik {
             player.Score -= 100;
           }
           Console.Clear();
-          Game.GameWOOD(player, gam3);
+          Game.GameWOOD(player);
         } else if (menuwahl == "0") {
           Code(player, version, zeilen);
         }

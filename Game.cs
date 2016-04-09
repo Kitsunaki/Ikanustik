@@ -1085,53 +1085,72 @@ namespace Ikanustik {
       }
     }
 
-    public static void GameWOOD(Player player, bool gam3) {
+    private enum FightState {
+      Intro,
+      Fight,
+      MeetReinhart,
+      MeetHelga,
+      TrainHelga,
+      TrainReinhart,
+    }
+
+    public static void GameWOOD(Player player) {
       IList<Entity> enemys = GetMonstersBlackwood().ToList();
+      FightState state = FightState.Intro;
       int blackwoodTrain = 1;
       bool HelgaMet = false;
       player.Score += 100;
 
-      Menus.Bar();
-      Console.WriteLine("Dann lass uns mal ernster werden. Eine Geschichte erzählen. Und sie ist \nbestimmt auch so passiert! Ich versetze dich in meine Lage. Na dann wollen \nwir doch mal sehen. Drücke Enter, um die Geschichte zu \"entern\" :P");
-      Console.ReadLine();
-      Console.Clear();
-      Menus.Bar();
-      Console.WriteLine("Willkommen im tiefen Dickicht des wilden Schwarzwaldes. Du bewegst dich \nvorsichtig durch's Unterholz...Man sagt, hier lauerten Dämonen. Doch was ist \ndas? Eine Person.\n");
-      Console.ReadLine();
-
-      Console.Clear();
-      Reinhart.IntroBlackwood(player);
-      WeaponStore.Store(player);
-
       for (int i = 0; i < enemys.Count; i++) {
-        switch (i) {
-          case 0:
-            // Erster Kampf, hier muss der Clash einmalig aufgerufen um die Logik zu erhalten.
+        switch (state) {
+          case FightState.Intro:
+            Menus.Bar();
+            Console.WriteLine("Dann lass uns mal ernster werden. Eine Geschichte erzählen. Und sie ist \nbestimmt auch so passiert! Ich versetze dich in meine Lage. Na dann wollen \nwir doch mal sehen. Drücke Enter, um die Geschichte zu \"entern\" :P");
+            Console.ReadLine();
+            Console.Clear();
+            Menus.Bar();
+            Console.WriteLine("Willkommen im tiefen Dickicht des wilden Schwarzwaldes. Du bewegst dich \nvorsichtig durch's Unterholz...Man sagt, hier lauerten Dämonen. Doch was ist \ndas? Eine Person.\n");
+            Console.ReadLine();
+            Console.Clear();
+            goto case FightState.MeetReinhart;
+
+          case FightState.MeetReinhart:
+            Reinhart.IntroBlackwood(player);
+            WeaponStore.Store(player);
             enemys[i].Clash(player);
             Reinhart.BlackwoodStepmother(player);
-            continue;
+            state = FightState.Fight;
+            break;
 
-          case 7:
-            //In den Kämpfen nach Ekke Nekkepenn taucht Helga auf
+          case FightState.MeetHelga:
             HelgaMet = true;
             Helga.BlackwoodHello(player);
-            goto case 8;
-          case 8:
-          case 9:
-          case 10:
-          case 13:
-          case 14:
+            state = FightState.TrainHelga;
+            goto case FightState.TrainHelga;
+
+          case FightState.Fight:
+            Menus.BetweenFight(player, HelgaMet);
+            enemys[i].Clash(player);
+
+            if (enemys[i] is Ekke_Nekkepenn)
+              state = FightState.MeetHelga;
+            else if (enemys[i] is Nachtalb)
+              state = FightState.TrainReinhart;
+            else if (enemys[i] is Lich)
+              state = FightState.TrainHelga;
+            else if (enemys[i] is Lindwurm)
+              state = FightState.Fight;
+
+            break;
+
+          case FightState.TrainHelga:
             Helga.BlackwoodTrain(player, blackwoodTrain++, Helga.Portrait);
-            break;
+            goto case FightState.Fight;
 
-          case 11:
-          case 12:
+          case FightState.TrainReinhart:
             Reinhart.BlackwoodTrain(player, blackwoodTrain++, Reinhart.Portrait);
-            break;
+            goto case FightState.Fight;
         }
-
-        Menus.BetweenFight(player, HelgaMet);
-        enemys[i].Clash(player);
       }
     }
 
